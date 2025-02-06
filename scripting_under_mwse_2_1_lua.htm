@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie6 no-js"><![endif]-->
+<!--[if IE 7 ]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie7 no-js"><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie8 no-js"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie9 no-js"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!--<![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+        drex_file_name = "scripting_under_mwse_2_1_lua.htm";
+    //]]>
+    </script>
+
+    		<title>Scripting under MWSE 2.1 LUA</title>
+
+    <link rel="stylesheet" type="text/css" href="css/all.css" media="all" />
+    <link rel="stylesheet" href="de_style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="custom.css" type="text/css" media="all" />
+
+    <script type="text/javascript" src="js/all.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/drexplain.data.index.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/all2.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/oembed.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+        $(document).ready(function() {
+                $(".oembed").oembed(null,
+                        {
+                            embedMethod: "replace_with_new_size"
+                        });
+        });
+    //]]>
+    </script>
+                </head>
+<body class="b-body">
+<script type="text/javascript">
+//<![CDATA[
+    if (document.referrer == "" && navigator.userAgent == "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11")
+    {
+        var im = document.createElement("img");
+        im.src = "0";
+        document.body.appendChild(im);
+
+        $.drex_avoid_load = true;
+    }
+//]]>
+</script>
+<div class="b-pageLayout" id="pageLayout">
+<script type="text/javascript">
+//<![CDATA[
+    if ($.drex_avoid_load)
+        $("#pageLayout").addClass("hidden");
+    else if (1 == 1 && !is_touch_device())
+        $("#pageLayout").addClass("keep-visible");
+//]]>
+</script>
+        <div class="b-pageContent
+        m-pageContent__withoutHeader
+        m-pageContent__withoutLeft
+        m-pageContent__withoutRight
+        m-pageContent__withoutFooter
+" id="pageContent">
+            <table id="noscriptWarning" style="border-style: none; width: 100%; padding: 0; margin: 0; border-collapse: collapse;">
+                <tr style="border-style: none; width: 100%; padding: 0; margin: 0; border-collapse: collapse;">
+                    <td style="border-style: none; width: 100%; padding: 0; margin: 0; border-collapse: collapse;">
+                        <noscript><p>To properly display this page you need a browser with JavaScript support.</p></noscript>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="b-tree m-tree__contextMenu" id="keywordContextMenu"><table class="b-tree__layout"><tr><td class="b-tree__layoutSide"></td></tr></table></div>
+            <table class="b-pageContent__layout">
+                <tr class="b-pageContent__row m-pageContent__row__header" id="pageContentHeader">
+                    <td class="b-pageContent__side m-pageContent__side__header">
+                                            </td>
+                </tr>
+                <tr>
+                    <td class="b-pageContent__side">
+                    <table id="internal_wrapper"><!-- internal_wrapper -->
+                        <tr>
+
+                    <td class="b-pageContent__side m-pageContent__side__left" id="pageContentLeft"></td>
+                    <td class="b-pageContent__side m-pageContent__side__middle" id="pageContentMiddle">
+                        <script type="text/javascript">
+                        //<![CDATA[
+                            if (1 == 1 && !is_touch_device())
+                                $("#pageContentMiddle").addClass("hidden");
+                        //]]>
+                        </script>
+                        <div class="b-workZone
+" id="workZone">
+                            <table class="b-workZone__layout">
+                                <tr>
+                                    <td class="b-workZone__side m-workZone__side__nav" id="workZone_nav">
+                                        <div class="b-workZone__content m-workZone__content__nav" id="workZone_nav_content">
+                                        <a href="#" class="b-workZone__side__nav__dismiss" id="dismissSideNavButton">&times;</a>
+                                        <div class="b-splitter" id="splitter">
+                                            <div class="b-splitter__innerPre">
+                                                <div class="b-splitter__inner">
+                                                    <div class="b-splitter__part m-splitter__part__mainImg"></div>
+                                                    <div class="b-splitter__part m-splitter__part__topImg"></div>
+                                                    <div class="b-splitter__part m-splitter__part__bottomImg"></div>
+                                                    <div class="b-splitter__part m-splitter__part__middleImg"></div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+<div class="b-tabs">
+
+
+
+                        <div class="b-tabs__selectorItems">
+
+                            <div class="b-tabs__selectorItem m-tabs__selectorItem__selected m-tabs__selectorItem__first" id="tabSelector_menu">
+                                <span class="b-tabs__selectorItemIcon b-interfaceIcon m-interfaceIcon__menu"></span>
+                                <span class="b-tabs__selectorContent">&#x041C;&#x0435;&#x043D;&#x044E;</span>
+                            </div>
+    
+                            <div class="b-tabs__selectorItem m-tabs__selectorItem__unselected" id="tabSelector_index">
+                                <span class="b-tabs__selectorItemIcon b-interfaceIcon m-interfaceIcon__index"></span>
+                                <span class="b-tabs__selectorContent">&#x0418;&#x043D;&#x0434;&#x0435;&#x043A;&#x0441;</span>
+                             </div>
+    
+                            <div class="b-tabs__selectorItem m-tabs__selectorItem__unselected" id="tabSelector_search">
+                                <span class="b-tabs__selectorItemIcon b-interfaceIcon m-interfaceIcon__search"></span>
+                                <span class="b-tabs__selectorContent">&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;</span>
+                            </div>
+
+                        </div><!-- /b-tabs__selectorItems -->
+
+                        <div class="b-tabs__wrapperItems" id="tabWrapperItems">
+                        
+                            <div class="b-tabs__wrapperItem m-tabs__wrapperItem__selected" id="tabWrapper_menu">
+                                <div class="b-tabs__wrapperItemInner">
+                                    <div class="b-tree">
+                                    </div>                              
+                                </div>
+                                
+                            </div><!-- /menu -->
+
+                            <div class="b-tabs__wrapperItem" id="tabWrapper_index">
+                                <div class="b-tabs__wrapperItemInner">
+                                    <div class="b-tree"></div></div>
+                            </div>
+
+
+                            <div class="b-tabs__wrapperItem" id="tabWrapper_search">
+
+        
+
+<div class="b-search m-search__tabs" id="tabs_searchFormWrapper">
+    <form action="#" class="b-search__form">
+        <table class="b-search__layout">
+            <tr>
+                <td class="b-search__side m-search__side__input">
+                    <div class="b-search__gap">
+                        <label id="tabs_searchInput_label" for="tabs_searchInput" class="b-search__labelPlaceholder">&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;</label>
+                        <input id="tabs_searchInput" type="text" value="" class="b-search__inputText" />
+                    </div>
+                </td>
+                <td class="b-search__side m-search__side__submit">
+                    <span class="b-button b-search__button">
+                        <span class="b-button__wrapper">
+                            <span class="b-button__text"></span>
+                        </span>
+                        <input type="submit" class="b-button__submit" value="&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;" id="tabs_searchSubmit" />
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div><!-- /search -->
+<img src="Pics/i/blocks/search/loading.gif" class="b-tree__searching" id="searchProgress" alt="" />
+<div class="b-tabs__wrapperItemInner">
+
+<!-- .b-tree -->
+<div class="b-tree">
+    <!-- .b-tree__items -->
+    &#xA0;<br />&#xA0;
+    &#xA0;<br />&#xA0;
+    &#xA0;<br />&#xA0;
+    &#xA0;<br />&#xA0;
+    <!-- /.b-tree__items -->
+</div>
+<!-- /.b-tree -->
+
+
+
+                                </div>
+                            </div><!-- /wrapperItem -->
+                        </div><!-- /wrapperItems -->
+                    </div><!-- /b-tabs -->
+
+
+
+
+
+                                        </div><!-- /b-workZone__content -->
+                                    </td><!-- /workZone__nav -->
+
+
+
+                                    <td class="b-workZone__side m-workZone__side__article" id="workZone_article">
+                                        <div class="b-workZone__content" id="workZone_article__content">
+                                            <a href="#" class="b-article__presentSideNavButton" id="presentSideNavButton"><span></span></a>
+                                            <div class="b-workZone__overlay" id="workZone_article__overlay"></div>
+<div class="b-search m-search__workZone" id="searchZone">
+    <form action="#" class="b-search__form">
+        <table class="b-search__layout">
+            <tr>
+                <td class="b-search__side m-search__side__input">
+                    <div class="b-search__gap">
+                        <span class="b-interfaceIcon m-interfaceIcon__search m-interfaceIcon__search__input b-search__inputTextIcon"></span>
+                        <label id="workZone_searchInput_label" for="workZone_searchInput" class="b-search__labelPlaceholder">&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;</label>
+                        <input id="workZone_searchInput" type="text" value="" class="b-search__inputText" />
+                    </div>
+                </td>
+                <td class="b-search__side m-search__side__submit">
+                    <span class="b-button b-search__button">
+                        <span class="b-button__wrapper">
+                            <span class="b-button__text"></span>
+                        </span>
+                        <input type="submit" class="b-button__submit" value="&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;" id="workZone_searchSubmit" />
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div><!-- /search -->
+
+
+<div class="b-article" id="article">
+    <div class="b-article__preWrapper">
+        <table class="b-article__headerLayout" id="article__header">
+            <tr>
+                <td id="headerSide__nav" class="b-article__headerSide m-article__headerSide__nav">
+                    <div id="headerSide__nav__breadCrumbs" class="b-breadCrumbs">
+                        <ul class="b-breadCrumbs__items"><li class="b-breadCrumbs__item"><a href="skaz_pro_bamp_5_4.htm" class="b-breadCrumbs__link">&#x0421;&#x043A;&#x0430;&#x0437; &#x043F;&#x0440;&#x043E; &#x0411;&#x0430;&#x043C;&#x043F; 5.4</a></li>
+
+<li class="b-breadCrumbs__item"><a href="part_3__applications.htm" class="b-breadCrumbs__link">Part 3. Applications</a></li>
+
+<li class="b-breadCrumbs__item"><a href="useful_software.htm" class="b-breadCrumbs__link">Useful software</a></li>
+
+<li class="b-breadCrumbs__item"><a href="utility_dlya_raboty_s_plaginami.htm" class="b-breadCrumbs__link">&#x0423;&#x0442;&#x0438;&#x043B;&#x0438;&#x0442;&#x044B; &#x0434;&#x043B;&#x044F; &#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x044B; &#x0441; &#x043F;&#x043B;&#x0430;&#x0433;&#x0438;&#x043D;&#x0430;&#x043C;&#x0438;</a></li>
+
+<li class="b-breadCrumbs__item"><a href="zametki_po_nekotorym_utilitam.htm" class="b-breadCrumbs__link">&#x0417;&#x0430;&#x043C;&#x0435;&#x0442;&#x043A;&#x0438; &#x043F;&#x043E; &#x043D;&#x0435;&#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x044B;&#x043C; &#x0443;&#x0442;&#x0438;&#x043B;&#x0438;&#x0442;&#x0430;&#x043C;</a></li>
+
+<li class="b-breadCrumbs__item"><a href="newthings.htm" class="b-breadCrumbs__link">NewThings</a></li>
+
+<li class="b-breadCrumbs__item"><a href="morrowind_script_extender_mwse.htm" class="b-breadCrumbs__link">Morrowind Script Extender MWSE</a></li>
+
+<li class="b-breadCrumbs__item"><a href="great_note_on_mwse_2_0.htm" class="b-breadCrumbs__link">Great Note on MWSE 2.0</a></li>
+
+<li class="b-breadCrumbs__item">Scripting under MWSE 2.1 LUA</li>
+</ul>                    </div>
+                </td>
+                <td id="headerSide__buttons" class="b-article__headerSide m-article__headerSide__buttons">
+                    <div class="b-controlButtons">
+                        <ul class="b-controlButtons__items">
+                            <li class="b-controlButtons__item m-controlButtons__item__prev"><a href="great_note_on_mwse_2_0.htm" class="b-controlButtons__link" title="&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;"><span class="b-controlButtons__link_icon"></span><span class="b-controlButtons__link_text">&#xa0;&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;</span></a></li>
+                            <li class="b-controlButtons__item m-controlButtons__item__next"><a href="small_note_on_mwse_0_9.htm" class="b-controlButtons__link" title="&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;"><span class="b-controlButtons__link_text">&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;&#xa0;</span><span class="b-controlButtons__link_icon"></span></a></li>
+                                                </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="b-article__wrapper">
+            <div class="b-article__innerWrapper" id="description_on_page_placeholder">
+            <a id="top" class="anchor"></a>
+            </div><!-- /innerWrapper -->
+        </div>
+        <script type="text/javascript">
+        //<![CDATA[
+            if (1 == 0 || is_touch_device())
+            {
+                $(".b-article__wrapper").append(
+                    $("<table></table>")
+                    .addClass("b-article__footerLayout")
+                    .prop("id", "article__footer")
+                    .append(
+                        $("<tr></tr>").append(
+                            $("<td></td>")
+                            .addClass("b-article__headerSide m-article__headerSide__nav")
+                        )
+                        .append(
+                            $("<td></td>")
+                            .addClass("b-article__headerSide m-article__headerSide__buttons")
+                            .append(
+                                $("<div></div>").addClass("b-controlButtons")
+                                .html($("<ul></ul>").addClass("b-controlButtons__items").html("    <li class=\"b-controlButtons__item m-controlButtons__item__prev\"><a href=\"great_note_on_mwse_2_0.htm\" class=\"b-controlButtons__link\" title=\"&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;\"><span class=\"b-controlButtons__link_icon\"></span><span class=\"b-controlButtons__link_text\">&#xa0;&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;</span></a></li>\n    <li class=\"b-controlButtons__item m-controlButtons__item__next\"><a href=\"small_note_on_mwse_0_9.htm\" class=\"b-controlButtons__link\" title=\"&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;\"><span class=\"b-controlButtons__link_text\">&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;&#xa0;</span><span class=\"b-controlButtons__link_icon\"></span></a></li>\n"))
+                            )
+                        )
+                    )
+                );
+            }
+        //]]>
+        </script>
+    </div>
+</div>
+
+
+
+                                        </div>
+                                    </td><!-- /workZone__article -->
+                                </tr>
+                            </table>
+                        </div><!-- /workZone -->
+
+                    </td><!-- /pageContentMiddle -->
+                    <td class="b-pageContent__side m-pageContent__side__right" id="pageContentRight"></td>
+                        </tr>
+                    </table> <!-- /internal_wrapper -->
+                    </td>
+                </tr>
+                <tr class="b-pageContent__row m-pageContent__row__footer" id="pageContentFooter">
+                    <td class="b-pageContent__side m-pageContent__side__footer">
+                        <script type="text/javascript">
+                        //<![CDATA[
+                            if (1 == 1 && !is_touch_device())
+                                $( "#pageContentFooter" ).addClass("hidden");
+                        //]]>
+                        </script>
+                                            </td>
+                </tr>
+            </table>
+        </div><!-- /pageContent -->
+
+</div><!-- /pageLayout -->
+<div id="hiddenContent" class="hiddenContent">
+    <noscript>
+    <div>To properly display this page you need a browser with JavaScript support.</div>
+    </noscript>
+                <div class="description_on_page"><div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;"><div class="ic"><h1><strong>Scripting under MWSE 2.1 LUA</strong></h1></div></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>mintmike (C) 01 2020</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">https://www.fullrest.ru/forum/topic/41708-mwse-21-uroki-po-lua-skriptam/</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_8875473D98"><strong>Примечание!<br /></strong></span>от 10 2022</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Данные, приведенные в статье, несколько устарели.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.к. эти два года, МВСЕ активно развивалось!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Отчего, новейшие версии МВСЕ 2.0 могут содержать гораздо больше команд и заменять означенные здесь.<br />Рекомендуется посетить сайт разработчиков и свериться с текущей документацией!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>И не забудьте проверить плагины этого автора на Nexuse!<br /></strong>https://www.nexusmods.com/morrowind/mods/47015<br />содержат огромное кол-во всевозможных примеров!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">MWSE - &quot;расширитель скриптов Мирровинда&quot; или просто МыВСЕ:)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Описание функций MWSE:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">https://mwse.readthedocs.io/en/latest/mwscript/functions/index.html</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Константы игрового мира:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">https://mwse.readthedocs.io/en/latest/mwscript/references.html</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Настройки игры, Game Settings (глобальные переменные):</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">https://mwse.readthedocs.io/en/latest/mwscript/GMSTs.html</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>MWSE, начиная с версии 2.1, поддерживает простой и быстрый скриптовый язык Lua, для чего имеет несколько библиотек:</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><table class="de_tbl_946 detbl" style="width: 946px; height: 0; margin-left: 0; margin-right: auto;">
+<col style="width: 946px;" class="de_col_1_946" />
+<tr style="height: 0px;">
+<td class="de_td_946" style = "padding: 2px; padding-bottom: 1px; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;  width: 946px; vertical-align: top;" colspan = "1" rowspan = "1" >
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; event&#160; &#160; - библиотека событий, при которых будут вызываться lua-функции</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; json &#160; &#160; - взаимодействие с очень удобным json-форматом сохранения/загрузки игровых данных</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; mge&#160; &#160; &#160; - вызов функций MGE XE</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; mwscript - вызов оригинальных Морровинд-скриптов. Используйте только в случае необходимости</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; mwse &#160; &#160; - небольшое количество общих функций MWSE</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; string &#160; - обращение со строкой</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; table&#160; &#160; - взаимодействие с таблицами</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; tes3 &#160; &#160; - основной функционал для управления Морровиндом</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; tes3ui &#160; - управление пользовательским интерфейсом игры (все эти окна и меню игрока)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; timer&#160; &#160; - удобные таймеры</div>
+</td></tr></table></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Об использовании этих возможностей у нас и пойдёт с вами речь. Уроки задумывались как справочник, идут в целом по усложнению, но читать можно с любого места. </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Самая лучшая книга по Lua:&#160; https://vk.com/doc-127857710_437836162</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Руководство на русском языке:&#160; https://lua.org.ru/contents_ru.html </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Сокращенное руководство: https://lua.org.ru/main.html#the-little-lua-book</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">А мы с вами давайте лучше напишем и запустим в игре наш первый скрипт!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>*** Урок 1: Сообщения *** &#160; </strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Для запуска lua-скриптов, вам не нужно создавать мод в Construction Set. Достаточно открыть блокнот и записать, к примеру, вот такую функцию:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function myFun(e)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; mwse.log(&quot;Запущено сохранение: %s&quot;, e.filename)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">event.register(&quot;loaded&quot;, myFun)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Мы создали функцию local myFun(e), которая пишет имя загруженного в игре сохранения в лог-файл (по адресу &lt;Путь к папке Morrowind&gt;\MWSE.log).</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">local&#160; - означает, что функция локальная (не может быть вызвана из других файлов),</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">e - информация события (типа event), которая будет передаваться в вашу функцию,</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">%s - команда форматирования, которая вставляет вместо &quot;%s&quot; строку из переменной e.filename.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">event.register - регистрирует вашу функцию для события (привязывает функцию к событию)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&quot;loaded&quot; - имя события, данное событие вызывается при окончании загрузки сохранения в игре. Каждый раз, при возникновении события &quot;loaded&quot;(загрузке сохранения) будет запускаться ваша функция.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Итак, первый lua-скрипт к Морровинду написан. Сохраняем файл как:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&lt;Путь к папке Morrowind&gt;\Data Files\MWSE\mods\&lt;ваш мод&gt;\main.lua</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Имя основного файла должно быть обязательно &quot;main.lua&quot;, таковы требования МыВСЕ.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Имя подкаталога &lt;ваш мод&gt; может быть любым. При старте игры MWSE сканирует все подкаталоги ..\Data Files\MWSE\ и компилирует найденные скрипты. Ваш скрипт также скомпилируется, и если синтаксических ошибок нет, скрипт запустится один раз. Что означает &quot;скрипт запустится один раз&quot;? Это значит, что ваш файл исполнится при старте игры, лишь раз. Но так как фунция &quot;myFun&quot; будет зарегистрирована для события&quot;loaded&quot;, то и Запускаться она будет каждый раз по событию. При старте игры функция &quot;myFun&quot; вызвана не будет.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Заходим в Морровинд, загружаем любое сохранение и выходим. Где-то в середине файле логов MWSE.log должна появится запись:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&quot;Запущено сохранение: &lt;имя файл сохранения&gt;&quot;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если допущена ошибка, вы получите сообщение в файле логов:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&lt;Путь к папке Morrowind&gt;\MWSE.log</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Используйте поиск по тексту с именем &lt;вашего мода&gt;, чтобы быстро отыскать сообщения об ошибках в вашем lua-коде.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">В логах после слова Error указано описание ошибки и строка, в которой она возникла. Исправляйте ошибку и запускайте</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Морровинд снова. Ну что же. Поздравляю, первый lua-скрипт для Морровинда создан!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Давайте запустим ещё какой-нибудь пример. Замените текст в вашем файле, или просто добавьте ниже:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function showMessage(e)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; tes3.messageBox(&quot;Вы взяли &quot; .. tes3.getMobilePlayer().readiedWeapon.object.id)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">event.register(&quot;weaponReadied&quot;, showMessage)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Здесь при экипировке оружия будет выведено сообщение на экран. Событие &quot;weaponReadied&quot; вызывается, когда орудие взято в руки готово к атаке.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">.. - две точки есть операция слияния строк. id является строкой</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">getMobilePlayer() - возвращает ссылку на mobile игрока (на вашу мобилку :), ваш игровой болванчик, а точнее тело)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Подробнее о типах объектов, актеров, предметов в следующих уроках.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Ну вот, оказывается, создавать моды очень просто. Только идеи подавай!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>*** Урок 2: События *** &#160; </strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Вот все типы событий: https://mwse.readthedocs.io/en/latest/lua/event.html</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Рассмотрим с дюжину основных и как они работают:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><table class="de_tbl_943 detbl" style="width: 943px; height: 0; margin-left: 0; margin-right: auto;">
+<col style="width: 943px;" class="de_col_1_943" />
+<tr style="height: 0px;">
+<td class="de_td_943" style = "padding: 2px; padding-bottom: 1px; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;  width: 943px; vertical-align: top;" colspan = "1" rowspan = "1" >
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;loaded&quot; - игра загружена (из сохранения)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;initialized&quot; - игра инициализирована, .esm и .esp файлы загружены</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;simulate&quot; - начало каждого игрового кадра (не пауза и не меню)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;enterFrame&quot; - начало любого кадра</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;skillRaised&quot; - произошло повышение скила</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;attack&quot; - ближняя физ атака (с участием актера или существа, не обязательно игрока)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;activate&quot; - активация (кто-либо нажал на активатор)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;activationTargetChanged&quot; - в прицеле игрока объект для активации изменился</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;spellCast&quot; - кто-либо начал произносить заклинание</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;magicCasted&quot; - заклинание успешно произнесено или алхимия дала эффект</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;equip&quot; - момент экипировки предмета (начало момента)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;keyDown&quot; - нажата клавиша на клавиатуре</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;menuEnter&quot; - вызвано меню (на пр.кн. мыши)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160; &#160; &quot;weaponReadied&quot; - экипировано оружие</div>
+</td></tr></table></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">На событиях держится все обращения от MWSE к вашему коду.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">event.register(&lt;событие&gt;, &lt;функция&gt;)&#160; -- регистрирует имя вашей функции в специальной таблице</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Событие одно, а привязанных к нему функций может быть много. Функции даже могут иметь одни и те же имена в разных файлах.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Все они будет вызываться при каждом наступлении условий и возниконвении связанного с ними события.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Таким образом, для каждого события MWSE вызывает свои, зарегистрированные именно для него функции.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Мы можем очистить таблицу для конкретного события, написав:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">event.clear(&quot;имя события&quot;) Все запомненные для события функции будут отменены.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>*** Урок 3: Клавиши *** </strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Коды всех клавиш есть тут:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">https://mwse.readthedocs.io/en/latest/lua/guide/scancodes.html</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Для клавиатуры нам достаточно двух событий:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">event.register(&quot;keyDown&quot;, checkKeys) - вызывается при нажатии клавиши</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">event.register(&quot;keyUp&quot;, checkKeys) &#160; - вызывается при отпускании клавиши</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Как сделать так, чтобы нажатие на кнопку клавиатуры что-нибудь совершало?</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function checkKeys(e)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">-- pressed 'V'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">if (e.keyCode == 47) then</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">tes3.messageBox(&quot;You pressed 'V'&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">event.register(&quot;keyDown&quot;, checkKeys)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Функция checkKeys(e) проверяет код нажатой клавиши. Если это код клавиши 'v', то будет выведено сообщение.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Когда несколько клавиш задействовано, то удобнее оформить так:</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function dance()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function savePoint()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function createItem()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function checkKeys(e)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;-- pressed 'U'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;if (e.keyCode == 22) then dance(); return end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;-- pressed 'I'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;if (e.keyCode == 23) then createItem(); return end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;-- pressed 'O'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;if (e.keyCode == 24) then savePoint(); return end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function onLoaded()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; event.register(&quot;keyDown&quot;, checkKeys)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">event.register(&quot;loaded&quot;, onLoaded)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Ну что, готовы к чему-то побольше, навроде циклов?<hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>*** Урок 4: Казначей в локации *** &#160; </strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Давайте напишем функцию, которая просканирует локацию и выведет в лог имена и координаты всех и всего найденного в ней. Зарегистрируйте функцию самостоятельно, на событие &quot;loaded&quot;.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function makeLog()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; local cell = tes3.getPlayerCell() -- получаем ячейку нахождения игрока</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; local step = 1&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- это счетчик шагов цикла</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; local str = tostring(step)&#160; &#160; &#160; &#160; -- запишем значение счётчика в строку str</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; for ref in cell:iterateReferences() do</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; if (ref.object) then</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; str = str .. &quot; type: &quot; .. tostring(ref.object.objectType)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; str = str .. &quot; name: &quot; .. ref.object.name</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; str = str .. &quot; id: &quot; .. ref.object.id</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; pos: &quot; .. tostring(ref.position)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; if (ref.object.objectType == tes3.objectType.npc) then</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; &quot; .. tostring(ref.object.race.name)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; print(str)&#160; &#160; &#160; &#160; &#160; &#160; &#160; -- печатам нашу строку в лог</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; step = step + 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; str = tostring(step) -- перезапишем всю строку, записав туда снова значение нашего счётчика</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Данный цикл на каждом шаге печатает в лог-файл новую заполненную строку.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Функция print() после вывода сама переходит в начало след.строки без доп.команд.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">ref - пустая новая переменная-ссылка.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">iterateReferences() - метод для перебора ссылок на все объекты в ячейке. Методы вызываются через двоеточие.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Цикл for ref in cell:iterateReferences() do при каждом шаге кладёт в пустую переменную ref новую ссылку на очередной объект до тех пор, пока объекты не закончатся.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">do ... end - тело цикла. В теле цикла мы проверяем if (ref.object) - содержит ли наша ссылка объект. Если объект пустой (nil то есть нуль), то условие будет ложным (false), и мы переходим далее, на новый шаг. Если ref.object отлично от нуля, условие истинно (true), и выполняется всё, что между then ... end.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">tostring(ref.object.objectType) - дополняет нашу строку типом объекта. objectType является числом, поэтому мы переводим его в строку c помощью tostring()</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">if (ref.object.objectType == tes3.objectType.npc) then - проверяет, равен ли тип объекта npc. Если истина, то дополним нашу строку расой объекта.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">objectType - по сути одно из чисел из таблицы ниже. Таблица находится по адресу tes3.objectType. Это таблица типов (неполная, на самом деле типов больше, см. 7 урок).</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; &#160; &#160; Value&#160; &#160; Code &#160; &#160; Meaning</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1230259009 &#160; &#160; ACTI &#160; &#160; Activator</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1212369985 &#160; &#160; ACTI &#160; &#160; Alchemy</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1330466113 &#160; &#160; AMMO &#160; &#160; Ammunition</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1095782465 &#160; &#160; ACTI &#160; &#160; Apparatus</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1330467393 &#160; &#160; ARMO &#160; &#160; Armor</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1263488834 &#160; &#160; BOOK &#160; &#160; Book</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1414483011 &#160; &#160; CLOT &#160; &#160; Clothing</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1414418243 &#160; &#160; CONT &#160; &#160; Container</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1095062083 &#160; &#160; CREA &#160; &#160; Creature</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1380929348 &#160; &#160; DOOR &#160; &#160; Door</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1380404809 &#160; &#160; INGR &#160; &#160; Ingredient</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1129727308 &#160; &#160; LEVC &#160; &#160; Levelled Creature</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1230390604 &#160; &#160; LEVI &#160; &#160; Levelled Item</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1212631372 &#160; &#160; LIGH &#160; &#160; Light</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1262702412 &#160; &#160; LOCK &#160; &#160; Lockpick</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1129531725 &#160; &#160; MISC &#160; &#160; Misc Item</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1598246990 &#160; &#160; NPC_ &#160; &#160; NPC &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- наш случай</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1112494672 &#160; &#160; PROB &#160; &#160; Probe</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1095779666 &#160; &#160; REPA &#160; &#160; Repair Item</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1414546259 &#160; &#160; SCPT &#160; &#160; Script</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1195658835 &#160; &#160; SNDG &#160; &#160; Sound Generator</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1279610963 &#160; &#160; SPEL &#160; &#160; Spell</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1413567571 &#160; &#160; STAT &#160; &#160; Static</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; 1346454871 &#160; &#160; WEAP &#160; &#160; Weapon</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>***Урок 5 Кровати-Двери-Сундуки *** </strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">В предыдущем уроке мы нашли не одну сотню объектов. Давайте присмотримся к некоторой мебели. Вдруг не для каждого нпс найдется кровать или спальник? Где им спать, в сундуках? Ах да, в Морровинде время же заморожено, никто не спит, кроме нашего героя. Вот беда. Может быть, мы поправим это в последнем уроке?</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">local beds = 0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">local doors = 0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">local chests = 0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Три локальные переменные для мебели. Если убрать слово local, то переменные станут глобальными (доступными из любого модуля). Локальные переменные могут быть свободно доступны только функциям, определенным в их зоне видимости (то есть в нашем файле).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Как выделить из всех предметов, например, кровати? У них имя object.name = 'Кровать'. Но это ненадежно, вдруг имена на английском. Удобнее ориентироваться по id. id для каждого предмета уникален.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Как найти слово в строке id? Для поиска в строке существует:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;string.find(id,'[Bb]ed')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;-- [Bb] - означает один любой из символов 'B' 'b'&#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Если в строке id есть слово &quot;bed&quot; или &quot;Bed&quot;, функция вернёт нам 2 числа (или nil, если ничего не найдено):</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; -- pos1 - на каком символе начинается наше слово</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; -- pos2 - на каком символе заканчивается наше слово</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; local pos1, pos2 = string.find(id,'[Bb]ed') </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Теперь давайте дополним функцию makeLog:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function makeLog()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; local cell = tes3.getPlayerCell()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; local step = 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; local str = tostring(step)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; for ref in cell:iterateReferences() do</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; if (ref.object) then</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; if (ref.object.name) then&#160; &#160; &#160; &#160; &#160; &#160; &#160; -- не у всех предметов имеется поле name</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; &quot; .. ref.object.name</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; str = str .. &quot; id: &quot; .. ref.object.id &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; if (ref.object.class) then &#160; &#160; &#160; &#160; &#160; &#160; -- не у всех предметов имеется поле class</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; class: &quot; .. ref.object.class.name</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; if (ref.object.objectType == tes3.objectType.npc) then</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; &quot; .. tostring(ref.object.race.name)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; if (string.find(ref.object.id,'[Bb]ed')) then &#160; &#160; &#160; -- если находим кровать</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; beds = beds + 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; BED#&quot; .. tostring(beds) .. &quot;&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; elseif (string.find(ref.object.id,'[Dd]oor')) then&#160; -- иначе если находим дверь</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; doors = doors + 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; DOOR#&quot; .. tostring(doors)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; elseif (string.find(ref.object.id,'[Cc]hest')) then -- иначе если находим сундук</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; chests = chests + 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; str = str .. &quot; Chest#&quot; .. tostring(chests)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; &#160; print(str)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; step = step + 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; str = tostring(step)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; tes3.messageBox(&quot;Найдено кроватей %d, дверей %d, сундуков %d&quot;, beds, doors, chests)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">%d - на это место будет вставлено число из переменной, переданной в функцию messageBox следом за строкой (процесс называется &quot;форматирование строки&quot;).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Запускаем, проверяем! Если появились хорошие идеи, пишите в комментариях.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>Кого создать?</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>*** Урок 6: Bторой муж для Тойвалэ Отрален*** </strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Из урока 4 у нас есть лог объектов в локации, из него можно узнать id - уникальные идентификаторы мировых персонажей, тварей, мебели, и прочих вещей. Давайте заглянем к Арриллу на огонёк и клонируем его (: Надеюсь, его жена не упадёт в обморок. Или это не его жена стоит рядом?</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; --[[ Комментарий.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; tes3.createReference({...}) - это функция для создания кого-либо, чего-либо,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; на вход получает таблицу {...}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; Можно записать без круглых скобок tes3.createReference{...}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; &#160; Делает то же, что и mwscript.PlaceAtPC или xPlace.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; ]]</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; local ref = tes3.createReference &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; {&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- начало таблицы</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; object = &quot;arrille00000000&quot;,&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- первый элемент таблицыб можно элементы менять местами, порядок не важен</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; position = tes3.getPlayerRef().position,&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; orientation = tes3.getPlayerRef().orientation, </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; cell = tes3.getPlayerCell(),</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; scale = 1&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; }&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- конец таблицы</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; tes3.messageBox(&quot;Привет, Тойвалэ!&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Не вздумайте запускать эту функцию не в начальной локации. Аррилл против такого! Нужны данные из незагруженной ячейки игрового мира. Morrowind чего-то не находит в доступе и крашится. Жалко.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Ладно. Тут у нас между фигурными скобками целая таблица с полями</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">object,&#160; &#160; &#160; &#160; - сюда подойдет id объекта или объект типа tes3physicalObject</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">position, &#160; &#160; - позиция создаваемого объекта, &#160; &#160; &#160; &#160; tes3vector3(x,y,z)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">orientation, - отриентация создаваемого объекта, tes3vector3(x,y,z)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">cell,&#160; &#160; &#160; &#160; &#160; &#160; - id ячейки или ячейка tes3cell</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">scale&#160; &#160; &#160; &#160; &#160; - масштаб, обычно у всех = 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Как нам усовершенствовать наш код, чтобы клонировать кого угодно от бутылки до Вивека? Сделаем в следующих уроках ^^)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>Типы tes3объектов (tes3.objectType)</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; -- '&gt;&gt;' обозначим наследование (в исходниках MWSE)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; GMST&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'TSMG')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PathGrid&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'DRGP')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; Region&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'NGER')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; Birthsign &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'NGSB')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; Reference &#160; &#160; &#160; &#160; &#160; (objectType: 'RFER')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; Spell &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'LEPS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; Enchantment &#160; &#160; &#160; &#160; (objectType: 'HCNE')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; PhisicalObject</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Activator &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'ITCA') &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Actor &gt;&gt; Container&#160; &#160; &#160; &#160; (objectType: 'TNOC')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Actor &gt;&gt; Creature &#160; &#160; &#160; &#160; (objectType: 'AERC')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Actor &gt;&gt; NPC&#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: '_CPN')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; BodyPart&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'YDOB')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Door&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'ROOD')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Land&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'DNAL')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; LandTexture &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'XETL')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; LeveledCreature &#160; &#160; &#160; &#160; &#160; (objectType: 'CVEL')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; LeveledItem &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'IVEL')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Static&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'TATS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Armor &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'OMRA')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Alchemy &#160; &#160; &#160; &#160; &#160; (objectType: 'HCLA')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Apparatus &#160; &#160; &#160; &#160; (objectType: 'APPA')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Book&#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'KOOB')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Clothing&#160; &#160; &#160; &#160; &#160; (objectType: 'TOLC')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Ingredient&#160; &#160; &#160; &#160; (objectType: 'RGNI')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Light &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'HGIL')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Lockpick&#160; &#160; &#160; &#160; &#160; (objectType: 'KCOL')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Lockpick &gt;&gt; Probe (objectType: 'BORP')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Misc&#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'CSIM')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; PhisicalObject &gt;&gt; Item &gt;&gt; Weapon&#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'PEAW')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; Ammo&#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'OMMA')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; Repair&#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'APER')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; AnimationGroup</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Class &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'SALC')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Cell&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'LLEC')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Dialogue&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'LAID')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; DialogueInfo&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'OFNI')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Faction &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'TCAF')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; MagicEffect &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'FEGM')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Quest &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'SEUQ')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Global&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'BOLG')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; MagicSourceInstance &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'LLPS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Race&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'ECAR')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Script&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'TPCS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Skill &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'LIKS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; Sound &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'NUOS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; BaseObject &gt;&gt; SoundGenerator&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'GDNS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; MobileObject &gt;&gt; MobileActor &gt;&gt; MobileNPC&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'HCAM')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; MobileObject &gt;&gt; MobileActor &gt;&gt; MobileNPC &gt;&gt; MobilePlayer&#160; (objectType: 'PCAM')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; MobileObject &gt;&gt; MobileActor &gt;&gt; MobileCreature &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'RCAM')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; MobileObject &gt;&gt; MobileProjectile &gt;&gt; MobileSpellProjectile (objectType: 'JRPM')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>***Урок 7: Что от чего происходит в мире tes3 ***</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Все что мы видим и слышим в мире tes3, MWSE разделяет на tes3объекты разных типов (см. таблицу tes3типов выше).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; GMST&#160; &#160; &#160; &#160; &#160; -- глобальные переменные игры&#160; &#160; &#160; &#160; (objectType: 'TSMG')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; PathGrid&#160; &#160; &#160; -- сетка для поиска пути актёрами&#160; &#160; (objectType: 'DRGP')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; Region&#160; &#160; &#160; &#160; -- задаёт погоду и звуки региона &#160; &#160; (objectType: 'NGER')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; Birthsign &#160; &#160; -- знак рождения героя &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'NGSB')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; BaseObject&#160; &#160; -- базовый объект для остальных объектов</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; MobileObject&#160; -- мобильный объект - это подвижная модель, 'болванка', ваше tes3 (или чьё-то) бренное тельце, а также снаряд</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">(objectType: 'XXXX') - это 4 символа, которые также можно представить уникальным числом. Таблица с типами находится по адресу tes3.objectType. Тип необходим для выведения разновидностей объектов и проверки в программе, с каким объектом мы имеем дело. Давайте рассмотрим основные важные типы поближе.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">tes3.objectType.object</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; Reference &#160; &#160; &#160; &#160; &#160; (objectType: 'RFER')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; Spell &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'LEPS')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; Enchantment &#160; &#160; &#160; &#160; (objectType: 'HCNE')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; PhisicalObject </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Как мы видим, объект (tes3object) происходит от базового объекта и может быть ссылкой (reference), заклинанием, зачарованием или физическим объектом. Физические объекты подразделяются на (см.таблицу): активаторы, актёров, части тела, двери, мировые поверхности, их текстуры, статики (неподвижные объекты), вещи, а также уровневые существа и уровневые вещи. Почти всё, что передставлено в Construction Set, является физическим объектом (tes3.objectType.phisicalObject).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Все объекты типа tes3object имеют три поля:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">object.id&#160; &#160; &#160; &#160; &#160; (string)&#160; &#160; -- &quot;айди&quot;, идентификатор</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">object.objectType&#160; (number)&#160; &#160; -- tes3-тип это просто уникальное число из таблицы</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">object.sourceMod &#160; (string)&#160; &#160; -- мод-источник объекта</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Кстати объекты actor, npc не являются видимыми моделями, движущимися игре, а являются описаниями, содержащими имя и прочие свойства. &quot;Болванчиков&quot; представляют объекты tes3mobileObject.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">tes3.objectType.mobileObject</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Представляет свойства подвижной модели персонажа, существа, выпущенной стрелы. Имеет свойства для управления движением и положением в пространстве.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">https://mwse.readthedocs.io/en/latest/lua/type/tes3mobileObject.html</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; MobileObject &gt;&gt; MobileActor &gt;&gt; MobileNPC&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'HCAM') -- тело персонажа</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; MobileObject &gt;&gt; MobileActor &gt;&gt; MobileNPC &gt;&gt; MobilePlayer&#160; (objectType: 'PCAM') -- тело персонажа игрока</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; MobileObject &gt;&gt; MobileActor &gt;&gt; MobileCreature &#160; &#160; &#160; &#160; &#160; &#160; (objectType: 'RCAM') -- тело сщество</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; MobileObject &gt;&gt; MobileProjectile &gt;&gt; MobileSpellProjectile (objectType: 'JRPM') -- тело снаряда</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Тело персонажа имеет:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">инвентарь</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">атрибуты (сила, ловкость, и т.д.)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">скилы</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">наложенные эффекты</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">список друзей</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">список врагов</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">управляющие флаги</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">AI данные</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">tes3.objectType.reference</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Очень нужный и важный тип tes3reference, или tes3-ссылка (далее просто &quot;ссылка&quot;).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">https://mwse.readthedocs.io/en/latest/lua/type/tes3reference.html</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">С помощью этого объекта из функции в функцию передаётся информация об остальных tes3объектах: вещах, актёрах (tes3actor), заклинаниях, генераторах звука и т.п. Давайте взглянем на её происхождение:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; BaseObject &gt;&gt; Object &gt;&gt; Reference &#160; &#160; &#160; &#160; &#160; (objectType: 'RFER')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Как мы видим, ссылка имеет tes3тип (tes3reference) и происходит от объекта, а он в свою очередь от базового объекта. Это означает, что можно написать:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; ref.id &#160; &#160; &#160; &#160; &#160; &#160; -- то же, что и ref.object.id</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; ref.objectType &#160; &#160; -- а вот тип у ссылки свой (objectType: 'RFER')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; ref.sourceMod&#160; &#160; &#160; -- то же, что и ref.object.sourceMod</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Поскольку ссылка - объект, настроенный на другой объект, то в её свойствах мы айди самого объекта, мод и т.п. также. Все кроме типа, тип у ссылки собственный.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Ссылок на один и тот же объект может быть много. Обращаться через ссылку очень удобно. Например, мы можем проверить ref, на кого или что она настроена:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; if (ref.objectType == tes3.objectType.сontainer) then ... end&#160; &#160; &#160; &#160; &#160; -- выполнится, если ref это контейнер</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; if (ref.objectType == tes3.objectType.phisicalObject) then ... end &#160; &#160; -- выполнится, если ref физ.объект</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; if (ref.objectType == tes3.objectType.light) then ... end&#160; &#160; &#160; &#160; &#160; &#160; &#160; -- выполнится, если ref источник света </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Тут последняя версия уроков, а также рассортированное описание TES3 классов:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">https://yadi.sk/d/pNaDhws2m1-6AA</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">3.4 – Выражения, все виды операторов</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">3.4.9 – Конструкторы таблиц (как создавать {...} таблицы)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">3.4.8 – Приоритет операторов (что быстрее выполнится + или &gt;= и т.п)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">3.5 – Правила видимости (создание/удаление локальных переменных)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Использует недокументированную (ещё) функцию addMagicEffect, которая позволяет добавлять новые эффекты. Примеры использования можно посмотреть в скриптах мода.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; tes3.addMagicEffect</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; name, &#160; &#160; &#160; &#160; &#160; &#160; -- string,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; id, &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- number, EffectID</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; description,&#160; &#160; &#160; -- string, описние</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; lighting&#160; &#160; &#160; &#160; &#160; -- vector3, цвет свечения, RGB</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; icon, &#160; &#160; &#160; &#160; &#160; &#160; -- string, путь к иконке</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; particleTexture , -- string, путь к текстуре частиц</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; baseCost, &#160; &#160; &#160; &#160; -- 1.0f по умолчанию</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; school, &#160; &#160; &#160; &#160; &#160; -- 0 по умолчанию</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; size, &#160; &#160; &#160; &#160; &#160; &#160; -- 1.0f по умолчанию</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; sizeCap,&#160; &#160; &#160; &#160; &#160; -- 1.0f по умолчанию</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; speed,&#160; &#160; &#160; &#160; &#160; &#160; -- 1.0f по умолчанию</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; castSound,&#160; &#160; &#160; &#160; -- string, звуки</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; boltSound</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; hitSound,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; areaSound,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; castVFX,&#160; &#160; &#160; &#160; &#160; -- сами эффекты, PhysicalObject</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; boltVFX,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; hitVFX,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; areaVFX,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; allowEnchanting,&#160; -- дальше идут флаги (true/false)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; allowSpellmaking,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; appliesOnce,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; canCastSelf,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; canCastTarget,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; canCastTouch,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; casterLinked,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; hasContinuousVFX,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; hasNoDuration,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; hasNoMagnitude,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; illegalDaedra,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; isHarmful,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; nonRecastable,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; targetsAttributes,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; targetsSkills,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; unreflectable,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; usesNegativeLighting</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; onTick,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; onCollision</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Можно надеяться, что появится и функция типа addNewSkill ...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>Урок 8: &quot;Как создать / прочитать текстовый файл&quot;</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">--=== Функции Lua для работы с файлами ===--</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">io.input()&#160; &#160; -- задаём файл для чтения</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">io.output() &#160; -- задаём файл для записи</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">io.read() &#160; &#160; -- читаем строку из файла</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">io.write()&#160; &#160; -- пишем строку в файл</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Для примера посчитаем количество строк и слов в интересующем нас файле, пусть он называется inp.txt</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Запускать программу будем на компиляторе lua53.exe (последняя версия).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">1 Скачаем, если у вас его нет. Скачать можно тут: http://luabinaries.s...t/download.html</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">2. Создаём в одном каталоге с lua53.exe новый текстовый файл с текстом программы, например &quot;prog.lua&quot;:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">io.output('out.txt') -- задаём файл с результатом</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">io.input('inp.txt')&#160; -- откуда будем читать</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">local str = io.read() -- читаем первую строку из файла</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">local snum = 0 -- количество строк</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">local wnum = 0 -- количество слов</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">while str do&#160; &#160; &#160; &#160; -- цикл исполняется пока str не равно nil</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; snum = snum + 1 &#160; -- увеличиваем счётчик строк на 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; for s in str:gmatch(&quot;[%w'-]+&quot;) do -- для каждой найденной в строке цепочки цифро-букв, &quot;'&quot; и &quot;-&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; if s:find(&quot;%a&quot;) then&#160; &#160; &#160; &#160; &#160; &#160; -- если цепочка имеет хотя бы одну букву</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; wnum = wnum + 1 &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- увеличиваем счётчик слов на 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; str = io.read() &#160; -- читаем следующую строку</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">io.write('Всего строк в файле ',snum,'\n') -- выводим результат в файл</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">io.write('Bсего слов в файле ',wnum,'\n')&#160; -- \n -- служебный символ перехода на новую строку</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">print('Всего строк в файле',snum,' всего слов в файле',wnum)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Замечание: все файлы должны лежать в одной папке. </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">3. Перетаскиваем мышкой нашу программу &quot;prog.lua&quot; на lua53.exe и отпускаем, рядом появляется наш файл с результатом &quot;res.txt&quot;.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">4. Для повторных запусков можно создать prog.bat файл, и запускать нашу програму нажатием на него</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">lua53 prog.lua</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">cmd</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>Про что сделать следующий сложный урок? (не более 2 вариантов в ответе, или свои варианты)</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">1. Как правильно подключить и использовать mcm (Настройка Модов в Главном меню)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">2. Как создавать окошки и кнопочки. Внедрим кнопку в окно с диалогом с нпс. По нажатию он будет нам отвечать про погоду и силу ветра.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">3. Как заставить нпс`а: упасть на кровать и лежать на ней ничком.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">4. Появляется и исчезает бог (Вивек, например), все сбегаются к месту силы.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">5. Как работает самый частый пакет ии: AIWander (шататься окрест)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">6. Как работает&#160; AIActivate. Как заставить нпс`а выйти на улицу, а Фаргота бегать по кругу.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">7. Выделить стат-ку из редактора и посмотреть: сколько и каджитов и орков на Ввардэнфелле и чем они занимаются, какой ср.уровень, скорость, магия.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Но сначала простой урок номер 9: &quot;Как создавать окна, меню, кнопки в Морровинд&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Самый короткий вариант создать окошко. Назовём его Винни. Короткий плагин из десятка строчек:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local winny</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">local function showWinny()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; winny = tes3ui.createMenu -- создается новое меню (просто окно)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; id = tes3ui.registerID('winny'), -- нашему окну выдаётся id, по которому можно затем к нему обращаться</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; fixedFrame = true, -- с жёстко фиксированной рамкой</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; winny:updateLayout() -- обновить элементы на экране</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">event.register(&quot;keyDown&quot;, showWinny, {filter = 44}) -- при нажатии на &quot;z&quot; будет появляться Винни</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Запускаем Главное меню Морровинд. Жмакаем на &quot;z&quot;.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Появляясь, наше окно не хочет исчезать. Давайте добавим текст в наше окно, а также кнопку &quot;назад&quot;:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local winny</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function hideWinny()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny:destroy() -- функция для удаления Винни</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function showWinny()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny = tes3ui.createMenu</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; id = tes3ui.registerID('winny'),</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; fixedFrame = true,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny:createLabel{ text = 'winny'} -- добавляем текст в окно</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local button = winny:createButton -- добавляем кнопку</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; id = tes3ui.registerID('Cancel'),</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; text = 'Назад',</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; button:register(&quot;mouseClick&quot;, hideWinny) -- при щелчке по кнопке будет вызываться hideWinny()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny:updateLayout()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; event.register(&quot;keyDown&quot;, showWinny, {filter = 44}) -- z</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Теперь, если нажать &quot;z&quot; в игре, окно появляется и маячит посреди экрана. Как перейти в режим меню?</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">tes3ui.enterMenuMode(winny) -- попадаем в режим, когда игра на паузе и появляется указатель мыши для управления в меню</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;Добавим ещё несколько полезных строк:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160; </span><span class="de_34F0647984">&#160; local winny</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local winny_id -- сохраним id окна отдельно</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function hideWinny()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny:destroy()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; if tes3ui.menuMode then tes3ui.leaveMenuMode() end -- выходим из режима меню</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function showWinny()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; if tes3ui.findMenu(winny_id) then return end -- если окно уже есть, не создаём его повторно</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny_id = tes3ui.registerID('winny')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny = tes3ui.createMenu</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; id = winny_id,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; fixedFrame = true,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny:createLabel { text = 'winny'}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local button = winny:createButton</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; id = tes3ui.registerID('Cancel'),</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; text = 'Назад',</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; button:register(&quot;mouseClick&quot;, hideWinny)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny:updateLayout()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; tes3ui.enterMenuMode(winny) -- режим меню</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; event.register(&quot;keyDown&quot;, showWinny, {filter = 44}) -- z</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Готово. Также, в окно можо добавлять блоки (свободное пространство для элементов), а в блоки уже добавлять тексты, изображения и кнопки.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local block = winny:createBlock{}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; block.width = 1000 &#160; &#160; &#160; -- ширина</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; block.autoHeight = true&#160; -- высота выбирается автоматически</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; block.childAlignX = 0.5&#160; -- горизонт. выравнивание элементов по центру</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; block.childAlignY = 0.5&#160; -- верт. выравнивание элементов по центру</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; block.flowDirection = 'top_to_bottom' -- разместить элементы сверху вниз</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local l = block:createLabel{ ... } &#160; -- добавить запись</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local b = block:createButton{ ... }&#160; -- добавить кнопку</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local img = block:createImage{ ... } -- добавить изображение</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local nif = block:createNif{ ... } &#160; -- добавить модель</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Теперь вы можете создавать меню в Морровинд под свои нужды.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Полные возможности см. в описании TES3 классов (последняя ссылка в шапке темы)</span><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_DBF328B893"><strong>Урок 10: &quot;Разговоры&quot;</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Сегодня мы:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">1. Создадим модуль, который будет штамповать нам окна</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">2. Используя этот модуль, сотворим окно для разговора с НИП'ом (Не Игровым Персонажем)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">3. Внедрим кнопку в MenuDalogue (в основное окно для диалогов в Морровинде)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">4. Добавим функции для ответа: &quot;кто вы?&quot;, &quot;который час?&quot;, &quot;как погода?&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Для понимания этого материала нужно основательно усвоить предыдущий урок.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Пусть у нас есть каталог с модом MyMod. А в нём основной модуль main.lua</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Создадим вспомогательный модуль (файл) win.lua. Он нужен нам для того, чтобы потом затем пользоваться им, не повторяя один и тот же код&#160; over9000+ раз. </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">win.lua будет иметь всего одну функцию new(name) - создавать новое окно:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local this = {}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; this.new = function(name)&#160; &#160; &#160; -- функция, создающая новое окно и возвращающая нам его данные</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local m = {&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- данные нашего нового окна</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; id = tes3ui.registerID(name),</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; ltext = ' Enter: ',</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; block = {[1] = ''},</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; m.menu = tes3ui.createMenu{id = m.id, fixedFrame = true}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; m.menu.alpha = 1.0 &#160; &#160; &#160; &#160; &#160; &#160; -- нулевая прозрачность</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; m.show = function()&#160; &#160; &#160; &#160; &#160; &#160; -- отобразить окно</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.menu:updateLayout()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; tes3ui.enterMenuMode(m.menu)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; m.hide = function()&#160; &#160; &#160; &#160; &#160; &#160; -- спрятать окно</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; if not tes3ui.findMenu(m.id) then return end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.menu:destroy()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; if tes3ui.menuMode then tes3ui.leaveMenuMode() end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; m.addBlock = function(n, width, ltext)&#160; -- добавить блок с номером n, шириной [и необязательным текстом надписи]</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.block[n] = m.menu:createBlock{}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.block[n].width = width or 360</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.block[n].autoHeight = true</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.block[n].childAlignX = 0.5</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.block[n].childAlignY = 0.5</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; m.block[n].flowDirection = 'top_to_bottom'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; if ltext then &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- если указан 3 параметр - текст надписи, то добавляем её</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; m.block[n]:createLabel {text = ltext}</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; m.addBlockButton = function(n, buttext, func)&#160; -- добавить в блок номер n кнопку с текстом buttext</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local button = m.block[n]:createButton</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; id = tes3ui.registerID(buttext),</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; text = buttext,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; button:register(&quot;mouseClick&quot;, func)&#160; -- при нажатии на кнопку будет вызываться функция func</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; return m&#160; -- возвращаем созданную таблицу с данными и функциями для нашего нового окна</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; return this</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Добавим этот модуль в наш основной модуль main.lua</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">local win = require(&quot;MyMod.win&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Теперь мы можем:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">w = win.new(...),&#160; &#160; &#160; &#160; &#160; &#160; &#160; -- создавать новые окна</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">w.addBlock (...), &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- добавлять в них болки</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">w.addBlockButton (...)&#160; &#160; &#160; -- конопки</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">w.show (...) &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- показывать</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">w.hide (...)&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- и прятать их </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Что мы и сделаем:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local win = require(&quot;Clever Actors Dialogues.win&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local winny</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function winnyShow()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local width = 360</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny = win.new('winny')&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- создадим новое окно</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.addBlock(1, width, 'Сказать...')&#160; -- добавим блок номер 1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.addBlock(2, width, '----------')&#160; -- добавим блок номер 2</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.addBlockButton(2, 'назад', winny.hide) -- добавим в блок номер 2 кнопку назад</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.show()&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- а теперь выведем окно</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; event.register(&quot;keyDown&quot;, winnyShow, {filter = 44}) -- z</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">При нажатии на &quot;z&quot; окно покажется, при нажатии &quot;назад&quot;&#160; - спрячется.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Теперь создадим функцию, которая внедрит в меню диалога (MenuDialog) новую кнопку &quot;Диалог с&#160; &lt;имя персонажа&gt;&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Есть такое событие &quot;menuEnter&quot;. Оно возникает, когда на экран выводится любое окно (меню). В данных этого события отправляется id этого нового окна (просто число).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;Подробнее о всех события тут:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">https://mwse.readthedocs.io/en/latest/lua/event.html</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Это нам и нужно. Зарегистрируем на событие &quot;menuEnter&quot; новую функцию в main.lua:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local md_id &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- id MenuDialog</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local md_db &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- это будет наша кнопка &quot;Диалог с npc&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local md_db_id&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- id нашей кнопки</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function dlgButton(e)&#160; -- е - это данные события &quot;menuEnter&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_id = tes3ui.registerID(&quot;MenuDialog&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; if e.menu.id ~= md_id then return end -- выходим, если id окна не совпадает с MenuDialog (открыто что-то другое)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md = tes3ui.findMenu(md_id) &#160; &#160; &#160; &#160; &#160; -- иначе, продолжаем. Сохраняем меню MenuDialog как md</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db_id = tes3ui.registerID(&quot;md_db&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db = md:createButton { &#160; &#160; &#160; &#160; &#160; &#160; -- добавляем нашу кнопку в MenuDialog (появится внизу окна)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; id = md_db_id,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; text = 'Диалог c '..tes3ui.getServiceActor().object.name,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db.widthProportional = 1.0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db:register(&quot;mouseClick&quot;, winnyShow) -- при нажатии на кнопку будет вызываться наше окно Winny</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; event.register(&quot;menuEnter&quot;, dlgButton) -- регистрируем функцию на событие &quot;menuEnter&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Можно пробовать запускать. Теперь не хватает вопросов и ответов от нпс.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">При использовании tes3.messageBox(...) и открытом MenuDialog текст выводится прямо в него, а не появляется отдельно.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Этим и воспользуемся.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">НИП будет нам отвечать:</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; local function selfDialog()&#160; -- говорит своё имя, расу и класс</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; local mbl = tes3ui.getServiceActor()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; local str = 'Это я, '..mbl.object.name..', '.. mbl.object.race.name ..', '..mbl.object.class.id</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; tes3.messageBox(str)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; local function daytimeDialog()&#160; -- говорит сколько часов до конца дня</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; local wc = tes3.getCurrentWeather().controller</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; local str = tostring(wc.daysRemaining)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; str = str ..' день , час ' .. tostring(wc.hoursRemaining)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; tes3.messageBox(str)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; local function weatherDialog()&#160; -- проверяет состояние погоды, озвучивает</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; local w = tes3.getCurrentWeather()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; local str = 'Нынче'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; if w.index == 1 then str = str..' ясно'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; else str = str..'... что там, не знаю'</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; &#160; tes3.messageBox(str)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Теперь нужно вызывать эти функции из нашего winny.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Дополним получившийся main.lua</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function winnyShow()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local width = 360</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; local chlist = -- лист ответов (&quot;Choiсe list&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; ['Кто вы?'] = selfDialog,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; ['Который час?'] = daytimeDialog,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; &#160; ['О погоде'] = weatherDialog,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny = win.new('winny')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.addBlock(1, width, 'Сказать...')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; for chtext,fun in pairs(chlist) do &#160; -- для каждой записи из chlist</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; winny.addBlockButton(1, chtext, function()&#160; -- добавить функцию</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; winny.hide() &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- прячущую окно winny</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; &#160; fun()&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- и вызывающую соответствующую функцию</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; &#160; end)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.addBlock(2, width, '----------')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.addBlockButton(2, 'назад', winny.hide)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; winny.show()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local md_id &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- Menu Dialogue id</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local md_db &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -- Menu Dialogue _ Dialogue Button</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local md_db_id</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local win = require(&quot;Clever Actors Dialogues.win&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local winny</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function dlgButton(e)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; --collectgarbage('collect')</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_id = tes3ui.registerID(&quot;MenuDialog&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; if e.menu.id ~= md_id then return end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md = tes3ui.findMenu(md_id)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db_id = tes3ui.registerID(&quot;cleveractors:md_db&quot;)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db = md:createButton {</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; id = md_db_id,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; &#160; text = 'Диалог c '..tes3ui.getServiceActor().object.name,</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; }</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db.widthProportional = 1.0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; md_db:register(&quot;mouseClick&quot;, winnyShow)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160;&#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; local function onLoad()</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; &#160; event.register(&quot;menuEnter&quot;, dlgButton)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_34F0647984">&#160; &#160; event.register(&quot;loaded&quot;, onLoad)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">После добавления нашей кнопки в меню диалога, его нужно обновить (updateLayout). Иначе наша кнопка будет появляться не сразу, а только после первого ответа нип`а на любую из тем, или любого др. обновляющего окно события.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">&#160;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Если есть идеи, как улучшить ответы нпс, предлагайте. Или, ещё лучше, дополняйте плагин самостоятельно. Публикую opensource :)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Последняя версия планина &quot;Morrowind-Dialogues&quot; https://gitlab.com/Scoommich/morrowind-dialogues </span><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+</div>                                    			
+                			</div>
+</body>
+</html>

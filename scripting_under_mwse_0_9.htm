@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie6 no-js"><![endif]-->
+<!--[if IE 7 ]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie7 no-js"><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie8 no-js"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="ie ie9 no-js"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!--<![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+        drex_file_name = "scripting_under_mwse_0_9.htm";
+    //]]>
+    </script>
+
+    		<title>Scripting under MWSE 0.9</title>
+
+    <link rel="stylesheet" type="text/css" href="css/all.css" media="all" />
+    <link rel="stylesheet" href="de_style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="custom.css" type="text/css" media="all" />
+
+    <script type="text/javascript" src="js/all.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/drexplain.data.index.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/all2.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/oembed.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+        $(document).ready(function() {
+                $(".oembed").oembed(null,
+                        {
+                            embedMethod: "replace_with_new_size"
+                        });
+        });
+    //]]>
+    </script>
+                </head>
+<body class="b-body">
+<script type="text/javascript">
+//<![CDATA[
+    if (document.referrer == "" && navigator.userAgent == "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11")
+    {
+        var im = document.createElement("img");
+        im.src = "0";
+        document.body.appendChild(im);
+
+        $.drex_avoid_load = true;
+    }
+//]]>
+</script>
+<div class="b-pageLayout" id="pageLayout">
+<script type="text/javascript">
+//<![CDATA[
+    if ($.drex_avoid_load)
+        $("#pageLayout").addClass("hidden");
+    else if (1 == 1 && !is_touch_device())
+        $("#pageLayout").addClass("keep-visible");
+//]]>
+</script>
+        <div class="b-pageContent
+        m-pageContent__withoutHeader
+        m-pageContent__withoutLeft
+        m-pageContent__withoutRight
+        m-pageContent__withoutFooter
+" id="pageContent">
+            <table id="noscriptWarning" style="border-style: none; width: 100%; padding: 0; margin: 0; border-collapse: collapse;">
+                <tr style="border-style: none; width: 100%; padding: 0; margin: 0; border-collapse: collapse;">
+                    <td style="border-style: none; width: 100%; padding: 0; margin: 0; border-collapse: collapse;">
+                        <noscript><p>To properly display this page you need a browser with JavaScript support.</p></noscript>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="b-tree m-tree__contextMenu" id="keywordContextMenu"><table class="b-tree__layout"><tr><td class="b-tree__layoutSide"></td></tr></table></div>
+            <table class="b-pageContent__layout">
+                <tr class="b-pageContent__row m-pageContent__row__header" id="pageContentHeader">
+                    <td class="b-pageContent__side m-pageContent__side__header">
+                                            </td>
+                </tr>
+                <tr>
+                    <td class="b-pageContent__side">
+                    <table id="internal_wrapper"><!-- internal_wrapper -->
+                        <tr>
+
+                    <td class="b-pageContent__side m-pageContent__side__left" id="pageContentLeft"></td>
+                    <td class="b-pageContent__side m-pageContent__side__middle" id="pageContentMiddle">
+                        <script type="text/javascript">
+                        //<![CDATA[
+                            if (1 == 1 && !is_touch_device())
+                                $("#pageContentMiddle").addClass("hidden");
+                        //]]>
+                        </script>
+                        <div class="b-workZone
+" id="workZone">
+                            <table class="b-workZone__layout">
+                                <tr>
+                                    <td class="b-workZone__side m-workZone__side__nav" id="workZone_nav">
+                                        <div class="b-workZone__content m-workZone__content__nav" id="workZone_nav_content">
+                                        <a href="#" class="b-workZone__side__nav__dismiss" id="dismissSideNavButton">&times;</a>
+                                        <div class="b-splitter" id="splitter">
+                                            <div class="b-splitter__innerPre">
+                                                <div class="b-splitter__inner">
+                                                    <div class="b-splitter__part m-splitter__part__mainImg"></div>
+                                                    <div class="b-splitter__part m-splitter__part__topImg"></div>
+                                                    <div class="b-splitter__part m-splitter__part__bottomImg"></div>
+                                                    <div class="b-splitter__part m-splitter__part__middleImg"></div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+<div class="b-tabs">
+
+
+
+                        <div class="b-tabs__selectorItems">
+
+                            <div class="b-tabs__selectorItem m-tabs__selectorItem__selected m-tabs__selectorItem__first" id="tabSelector_menu">
+                                <span class="b-tabs__selectorItemIcon b-interfaceIcon m-interfaceIcon__menu"></span>
+                                <span class="b-tabs__selectorContent">&#x041C;&#x0435;&#x043D;&#x044E;</span>
+                            </div>
+    
+                            <div class="b-tabs__selectorItem m-tabs__selectorItem__unselected" id="tabSelector_index">
+                                <span class="b-tabs__selectorItemIcon b-interfaceIcon m-interfaceIcon__index"></span>
+                                <span class="b-tabs__selectorContent">&#x0418;&#x043D;&#x0434;&#x0435;&#x043A;&#x0441;</span>
+                             </div>
+    
+                            <div class="b-tabs__selectorItem m-tabs__selectorItem__unselected" id="tabSelector_search">
+                                <span class="b-tabs__selectorItemIcon b-interfaceIcon m-interfaceIcon__search"></span>
+                                <span class="b-tabs__selectorContent">&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;</span>
+                            </div>
+
+                        </div><!-- /b-tabs__selectorItems -->
+
+                        <div class="b-tabs__wrapperItems" id="tabWrapperItems">
+                        
+                            <div class="b-tabs__wrapperItem m-tabs__wrapperItem__selected" id="tabWrapper_menu">
+                                <div class="b-tabs__wrapperItemInner">
+                                    <div class="b-tree">
+                                    </div>                              
+                                </div>
+                                
+                            </div><!-- /menu -->
+
+                            <div class="b-tabs__wrapperItem" id="tabWrapper_index">
+                                <div class="b-tabs__wrapperItemInner">
+                                    <div class="b-tree"></div></div>
+                            </div>
+
+
+                            <div class="b-tabs__wrapperItem" id="tabWrapper_search">
+
+        
+
+<div class="b-search m-search__tabs" id="tabs_searchFormWrapper">
+    <form action="#" class="b-search__form">
+        <table class="b-search__layout">
+            <tr>
+                <td class="b-search__side m-search__side__input">
+                    <div class="b-search__gap">
+                        <label id="tabs_searchInput_label" for="tabs_searchInput" class="b-search__labelPlaceholder">&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;</label>
+                        <input id="tabs_searchInput" type="text" value="" class="b-search__inputText" />
+                    </div>
+                </td>
+                <td class="b-search__side m-search__side__submit">
+                    <span class="b-button b-search__button">
+                        <span class="b-button__wrapper">
+                            <span class="b-button__text"></span>
+                        </span>
+                        <input type="submit" class="b-button__submit" value="&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;" id="tabs_searchSubmit" />
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div><!-- /search -->
+<img src="Pics/i/blocks/search/loading.gif" class="b-tree__searching" id="searchProgress" alt="" />
+<div class="b-tabs__wrapperItemInner">
+
+<!-- .b-tree -->
+<div class="b-tree">
+    <!-- .b-tree__items -->
+    &#xA0;<br />&#xA0;
+    &#xA0;<br />&#xA0;
+    &#xA0;<br />&#xA0;
+    &#xA0;<br />&#xA0;
+    <!-- /.b-tree__items -->
+</div>
+<!-- /.b-tree -->
+
+
+
+                                </div>
+                            </div><!-- /wrapperItem -->
+                        </div><!-- /wrapperItems -->
+                    </div><!-- /b-tabs -->
+
+
+
+
+
+                                        </div><!-- /b-workZone__content -->
+                                    </td><!-- /workZone__nav -->
+
+
+
+                                    <td class="b-workZone__side m-workZone__side__article" id="workZone_article">
+                                        <div class="b-workZone__content" id="workZone_article__content">
+                                            <a href="#" class="b-article__presentSideNavButton" id="presentSideNavButton"><span></span></a>
+                                            <div class="b-workZone__overlay" id="workZone_article__overlay"></div>
+<div class="b-search m-search__workZone" id="searchZone">
+    <form action="#" class="b-search__form">
+        <table class="b-search__layout">
+            <tr>
+                <td class="b-search__side m-search__side__input">
+                    <div class="b-search__gap">
+                        <span class="b-interfaceIcon m-interfaceIcon__search m-interfaceIcon__search__input b-search__inputTextIcon"></span>
+                        <label id="workZone_searchInput_label" for="workZone_searchInput" class="b-search__labelPlaceholder">&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;</label>
+                        <input id="workZone_searchInput" type="text" value="" class="b-search__inputText" />
+                    </div>
+                </td>
+                <td class="b-search__side m-search__side__submit">
+                    <span class="b-button b-search__button">
+                        <span class="b-button__wrapper">
+                            <span class="b-button__text"></span>
+                        </span>
+                        <input type="submit" class="b-button__submit" value="&#x041F;&#x043E;&#x0438;&#x0441;&#x043A;" id="workZone_searchSubmit" />
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div><!-- /search -->
+
+
+<div class="b-article" id="article">
+    <div class="b-article__preWrapper">
+        <table class="b-article__headerLayout" id="article__header">
+            <tr>
+                <td id="headerSide__nav" class="b-article__headerSide m-article__headerSide__nav">
+                    <div id="headerSide__nav__breadCrumbs" class="b-breadCrumbs">
+                        <ul class="b-breadCrumbs__items"><li class="b-breadCrumbs__item"><a href="skaz_pro_bamp_5_4.htm" class="b-breadCrumbs__link">&#x0421;&#x043A;&#x0430;&#x0437; &#x043F;&#x0440;&#x043E; &#x0411;&#x0430;&#x043C;&#x043F; 5.4</a></li>
+
+<li class="b-breadCrumbs__item"><a href="part_3__applications.htm" class="b-breadCrumbs__link">Part 3. Applications</a></li>
+
+<li class="b-breadCrumbs__item"><a href="useful_software.htm" class="b-breadCrumbs__link">Useful software</a></li>
+
+<li class="b-breadCrumbs__item"><a href="utility_dlya_raboty_s_plaginami.htm" class="b-breadCrumbs__link">&#x0423;&#x0442;&#x0438;&#x043B;&#x0438;&#x0442;&#x044B; &#x0434;&#x043B;&#x044F; &#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x044B; &#x0441; &#x043F;&#x043B;&#x0430;&#x0433;&#x0438;&#x043D;&#x0430;&#x043C;&#x0438;</a></li>
+
+<li class="b-breadCrumbs__item"><a href="zametki_po_nekotorym_utilitam.htm" class="b-breadCrumbs__link">&#x0417;&#x0430;&#x043C;&#x0435;&#x0442;&#x043A;&#x0438; &#x043F;&#x043E; &#x043D;&#x0435;&#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x044B;&#x043C; &#x0443;&#x0442;&#x0438;&#x043B;&#x0438;&#x0442;&#x0430;&#x043C;</a></li>
+
+<li class="b-breadCrumbs__item"><a href="newthings.htm" class="b-breadCrumbs__link">NewThings</a></li>
+
+<li class="b-breadCrumbs__item"><a href="morrowind_script_extender_mwse.htm" class="b-breadCrumbs__link">Morrowind Script Extender MWSE</a></li>
+
+<li class="b-breadCrumbs__item"><a href="small_note_on_mwse_0_9.htm" class="b-breadCrumbs__link">Small note on MWSE 0.9</a></li>
+
+<li class="b-breadCrumbs__item">Scripting under MWSE 0.9</li>
+</ul>                    </div>
+                </td>
+                <td id="headerSide__buttons" class="b-article__headerSide m-article__headerSide__buttons">
+                    <div class="b-controlButtons">
+                        <ul class="b-controlButtons__items">
+                            <li class="b-controlButtons__item m-controlButtons__item__prev"><a href="small_note_on_mwse_0_9.htm" class="b-controlButtons__link" title="&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;"><span class="b-controlButtons__link_icon"></span><span class="b-controlButtons__link_text">&#xa0;&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;</span></a></li>
+                            <li class="b-controlButtons__item m-controlButtons__item__next"><a href="export_sphere_cell2nif.htm" class="b-controlButtons__link" title="&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;"><span class="b-controlButtons__link_text">&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;&#xa0;</span><span class="b-controlButtons__link_icon"></span></a></li>
+                                                </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="b-article__wrapper">
+            <div class="b-article__innerWrapper" id="description_on_page_placeholder">
+            <a id="top" class="anchor"></a>
+            </div><!-- /innerWrapper -->
+        </div>
+        <script type="text/javascript">
+        //<![CDATA[
+            if (1 == 0 || is_touch_device())
+            {
+                $(".b-article__wrapper").append(
+                    $("<table></table>")
+                    .addClass("b-article__footerLayout")
+                    .prop("id", "article__footer")
+                    .append(
+                        $("<tr></tr>").append(
+                            $("<td></td>")
+                            .addClass("b-article__headerSide m-article__headerSide__nav")
+                        )
+                        .append(
+                            $("<td></td>")
+                            .addClass("b-article__headerSide m-article__headerSide__buttons")
+                            .append(
+                                $("<div></div>").addClass("b-controlButtons")
+                                .html($("<ul></ul>").addClass("b-controlButtons__items").html("    <li class=\"b-controlButtons__item m-controlButtons__item__prev\"><a href=\"small_note_on_mwse_0_9.htm\" class=\"b-controlButtons__link\" title=\"&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;\"><span class=\"b-controlButtons__link_icon\"></span><span class=\"b-controlButtons__link_text\">&#xa0;&#x041F;&#x0440;&#x0435;&#x0434;&#x044B;&#x0434;&#x0443;&#x0449;&#x0430;&#x044F;</span></a></li>\n    <li class=\"b-controlButtons__item m-controlButtons__item__next\"><a href=\"export_sphere_cell2nif.htm\" class=\"b-controlButtons__link\" title=\"&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;\"><span class=\"b-controlButtons__link_text\">&#x0421;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0430;&#x044F;&#xa0;</span><span class=\"b-controlButtons__link_icon\"></span></a></li>\n"))
+                            )
+                        )
+                    )
+                );
+            }
+        //]]>
+        </script>
+    </div>
+</div>
+
+
+
+                                        </div>
+                                    </td><!-- /workZone__article -->
+                                </tr>
+                            </table>
+                        </div><!-- /workZone -->
+
+                    </td><!-- /pageContentMiddle -->
+                    <td class="b-pageContent__side m-pageContent__side__right" id="pageContentRight"></td>
+                        </tr>
+                    </table> <!-- /internal_wrapper -->
+                    </td>
+                </tr>
+                <tr class="b-pageContent__row m-pageContent__row__footer" id="pageContentFooter">
+                    <td class="b-pageContent__side m-pageContent__side__footer">
+                        <script type="text/javascript">
+                        //<![CDATA[
+                            if (1 == 1 && !is_touch_device())
+                                $( "#pageContentFooter" ).addClass("hidden");
+                        //]]>
+                        </script>
+                                            </td>
+                </tr>
+            </table>
+        </div><!-- /pageContent -->
+
+</div><!-- /pageLayout -->
+<div id="hiddenContent" class="hiddenContent">
+    <noscript>
+    <div>To properly display this page you need a browser with JavaScript support.</div>
+    </noscript>
+                <div class="description_on_page"><div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;"><div class="ic"><h1><strong>Scripting under MWSE 0.9</strong></h1></div></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A0C1A69777"><strong>Просто для истории! Т.к. для </strong></span><a class="local_link" href="scripting_under_mwse_2_1_lua.htm"><span class="de_2B94C39861"><strong>МВСЕ на ЛУА</strong></span></a><span class="de_A0C1A69777"><strong> это не актуально.<br /></strong></span><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">http://www.fullrest.ru/forum/topic/25384-manual-po-skriptam-pod-mwse/</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Redoran_Warrior(С) 2009</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Писание скриптов под MWSE</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Вступление</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Ты хотел бы изучить функции MWSE ? </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если ты еще не знаком с оригинальным скриптовым языком , советую прочитать учебник Ghаn-Buri-Ghan’а.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">В целом , MWSE добавляет 80 новых функций , 2 новых типа .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Компилирование скриптов с расширенными функциями.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Чтобы скомпилировать скрипты с расширенными функциями , используйте такие программы ,как MWEditSE , либо MWEdit .</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">ТЕС КС не поддерживает скрипты под MWSE , но вы можете использовать КС для редактирования остальных вещей в вашем плагине, не относящимся к скриптам. Впрочем, вы можете использовать КС и для редактирования скриптов с расширенными функциями , но вам выдаст ошибку , когда вы попытаетесь скомпилировать скрипт в КС.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">MWEditSE не проверяет скрипты на ошибки при компиляции , когда вы используете новые функции , поэтому – будьте бдительны и не допускайте ошибок.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Команду MenuTest 0 или ToggleMenus MWedit компилирует отлично от CS. Поэтому скрипты с этими командами можно компилировать только в CS, иначе отключаются Все меню. Более подробно это может разъяснить только автор MWedit.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Новые Ограничения и Полномочия в типах переменных.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Функции MWSE паботают с двумя типами переменных – STRING и REF . Оба обьявлены в скриптах ,использующих тип “long” . В обычных скриптах переменная типа “invitem” обрабатывается как STRING ( ограничение ) расширенными функциями . “invref” и “pcref” рассматриваются , как REF ( полномочие ) .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Значение новой команды “setx”</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">К сожалению , новые функции не могут быть простым способом объединены со стандартными функциями и командами. Команда “setx” используется , как заменитель стандартной команды “set” , когда вы используете новую функцию. Вы можете поставить значение только одной функции или ограничения по правую сторону от “”setx , но вы также можете ставить несколько значений по левую сторону , таких , как например “xInventory” , которая возвращает множественные значеня. .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Опять напомню вам, что компилятор не проверяет скрипты с расширенными функциями на ошибки, поэтому – будьте бдительны.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Подача контрольных блоков с 'ifx' и 'whilex'</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Стандартные скриптовые команды ‘if’ и ‘while’ не работают , когда тело блока включает в себя расширенные команды , для их замены используем 'ifx' и 'whilex' . 'ifx' и 'whilex' еще не полностью поддерживают синтаксис , я пока что использую только одно значение для примера . 'ifx' и 'whilex' будут работать , только когда значение НЕ равно нулю . Также вы можете использовать ‘else’ вместе с 'ifx' , но ни в коем случае ‘elseif’ , а ‘elseufx’ также нету .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Смотрите пример</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Старая версия скрипта</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">if ( state == 5 )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">раздел для 5</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">else</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">раздел , если не равно 5</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">endif</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Новая версия скрипта</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">set temp to ( state - 5 )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">ifx ( temp )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">раздел если не равно 5</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Else</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">раздел Если равно 5</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">endif</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если оставить только первый кусок , то будет так</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Старая версия</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">if ( state == 5 )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">раздел если равно 5</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">endif</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Новая версия</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">set temp to ( state - 5 )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">ifx ( temp )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">else</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">раздел если равно 5</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">endif</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Функции</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Типы названые STRING и REF на самом деле поддерживаются , как переменные типа ‘long’ . Функции перечисленные с операцией REF-&gt; на какой-то предмет , поддерживаются через оператор -&gt; , также поддерживаются через функцию xSetRef</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">References ( Полномочия )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xSetRef, xRefType, xGetRef, xGetCombat, xGetPCTarget</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xFirstNPC, xFirstItem, xFirstStatic, xNextRef</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Math ( Математические функции )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xDistance, xSqrt, xHypot, xDegRad, xRadDeg</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xCos, xSin, xTan, xArcCos, xArcSin, xArcTan</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">AI and Movement ( Программирование ИИ и движения )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xAITravel, xPlace, xPosition, xPositionCell, xStartCombat</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Inventory ( Инвентарь )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xInventory, xNextStack, xContentList</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xAddItem, xRemoveItem, xHasItemEquipped</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Attributes ( Атрибуты )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xGetBaseStr, xGetBaseInt, xGetBaseWil, xGetBaseAgi</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xGetBaseSpe, xGetBaseEnd, xGetBasePer, xGetBaseLuc</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">NPC Properties ( Параметры у NPC(non-playing character ) )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xIsFemale, xIsTrader, xIsTrainer, xIsProvider</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xGetService, xSetService, xModService</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xGetBaseGold, xGetGold, xSetBaseGold, xSetGold</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Item Properties ( Параметры у итемов )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xGetValue, xGetOwner, xGetWeight, xGetEncumb, xGetQuality</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xGetCondition, xGetMaxCondition, xGetCharge, xGetMaxCharge</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Keyboard Input ( Раскладка клавиатуры )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xKeyPressed, xTextInput, xTextInputAlt</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">File I/O</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xFileRewind, xFileSeek, xFileReadText, xFileWriteText</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xFileReadShort, xFileReadLong, xFileReadFloat, xFileReadString</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xFileWriteShort, xFileWriteLong, xFileWriteFloat, xFileWriteString</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Strings( Ограничения )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xPCCellID, xRefID, xMyCellID, xGetName, xGetBaseID</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xStringCompare, xStringLength, xStringParse</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xStringBuild, xLogMessage, xMessageFix</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xSetRef REF_reference</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">эта функция позволяет называть функции обьектов там , где стандартный синтаксис не позволяет</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">set myalchemyskill to myobject-&gt;GetAlchemy не работает , потому что стандартная ‘set’ не позволяет использовать переменные , как обьекты , поэтому мы будем писать так :</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">xSetRef myobject</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">set myalchemyskill to GetAlchemy</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xRefType</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Видит тип полномочий обьекта и переводит тип обьекта в цифры</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1230259009 = ACTI (Активатор)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1212369985 = ALCH (Алхимия(выпивка и т.п.))</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1095782465 = APPA (Аппарат для деланья зелий)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1330467393 = ARMO (Армор )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1263488834 = BOOK (Книжка)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1414483011 = CLOT (Одежда)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1414418243 = CONT (Контейнер)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1095062083 = CREA (Кричер)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1380929348 = DOOR (Дверь)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1380404809 = INGR (Ингридиент)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1129727308 = LEVC (Уровневый кричер)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1230390604 = LEVI (Уровневый итем)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1212631372 = LIGH (светильник)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1262702412 = LOCK (Отмычка)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1129531725 = MISC (Миск итем)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1598246990 = NPC_ (Непись)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1112494672 = PROB (Щуп)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1095779666 = REPA (Чинилки)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1414546259 = SCPT (Скрипт)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1195658835 = SNDG (Генератор звука)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1413567571 = STAT (Статик)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1346454871 = WEAP (Оружие)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF REF-&gt;xGetRef STRING_objectid</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение к одному активным обьектам , распределяя по ID , или 0 , если не находит активных обьектов. Очень полезно для размещения Неписей и уникальных обьектов.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF REF-&gt;xGetCombat</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение к цели, на которую была совершена атака , или же 0 , если атака совершена не была .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF xGetPCTarget</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение обьекту , на который направлен прицел игрока , или же 0 , если игрок не смотрит ни на что , что могло бы по отношению к нему быть использовано</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF xFirstNPC</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение определенному неписю или кричеру , который находится с игроком в одной ячейке , или же 0 , если там никого нет .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF xFirstItem</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает такое же значение , как и xFirstNPC , отличие в том , что теперь подразумеваются обьекты.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF xFirstStatic</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">То же самое , теперь со статиками.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF xNextRef REF_current</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение 'next' одному из трех типов обьектов (NPC, Item, и Static) которые находятся с игроком в одной ячейке . </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xDistance REF_target</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Подобно оригинальному GetDistance , но берет значения переменной , несмотря на ограничение objected . Использует систему координат из ТЕС КС.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xSqrt FLOAT_value</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает квадратный корень значения ( аналогично с GetSquareRoot из трибунала )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xHypot FLOAT_a, FLOAT_b</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает гипотенузу для сторон а,б и с</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xDegRad FLOAT_degrees</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Контвертит значение из градусов в радианы.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xRadDeg FLOAT_radians</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Из радианов в градусы</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xCos FLOAT_angle</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает косинус угла( угол дается в радианах )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xSin FLOAT_angle</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает синус угла ( угол дается в радианах )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xTan FLOAT_angle</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает тангенс угла( угол дается в радианах )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xArcCos FLOAT_value</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает косинус дуги ( в радианах )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xArcSin FLOAT_value</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Синус дуги ( в радианах )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT xArcTan FLOAT_value</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Тангенс дуги ( в радианах )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xAITravel FLOAT_x, FLOAT_y, FLOAT_z</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Аналог AITravel , чтобы согласовать переменные.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF xPlace STRING_objectid</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Ставит обьект objectID за игроком.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xPosition FLOAT_x, FLOAT_y, FLOAT_z, FLOAT_zRot</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Аналог оригинальной функции Position.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xPositionCell FLOAT_x, FLOAT_y, FLOAT_z, FLOAT_zRot, STRING_cellname</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Аналог оригинальной PositionCell</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xStartCombat REF_target</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Аналог оригинальной StartCombat</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">STRING, LONG, REF REF-&gt;xInventory</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает три значения , которые основаны на инвентаре определенного контейнера , непися или кричера . Первое – ID итема в инвентаре. Второе – номер итема который найден . Третье – то ,полномочие , которое мы имеем относительно этого итема . Все три значения будут равны 0 ,если ничего в инвентаре нет</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">STRING, LONG, REF xNextStack REF_next</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение следующего итема в инвентаре. Параметром этой функции является результат предыдущей функции xInventory . Попытки привязать другой вид значений этой функции приведет к ошибкам , и , возможно , краху игры. Если инвентарь непися , кричера или контейнера изменен , то полученное значение этой функции бесполезно, потому , что надополучить новое значение с измененным инвентарем .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">STRING, LONG, LONG, LONG, FLOAT, STRING, REF REF-&gt;xContentList REF_next</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Альтернатива как для функции xInventory , так и для функции xNextStack , которая возвращает 7 значений основанных на состоянии определенного контейнера , непися или кричера . Если входной параметр равен 0 , то первый итем контейнера , непися или кричера возвращена</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Пример : set id count type value weight name next to container-&gt;xContentList next</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Первый параметр – id – это ИД обьекта . Второй – который он по счету . Третий – тип по кодам , использованным в функции xRefType . Остальные три – цена , вес , имя .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xAddItem STRING_idstring, LONG_count</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Аналог стандартной AddItem .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xRemoveItem STRING_idstring, LONG_count</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Аналог стандартной RemoveItem .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xHasItemEquipped STRING_objectid</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает 1 если непись или кричер чтото еквипнул ( меч и т.п ) , 0 – если ничего не еквипнул .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBaseStr</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение силы непися.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBaseInt</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение интеллекта непися .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBaseWil</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение воли непися.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBaseAgi</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение ловкости непися.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBaseSpe</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение скорости непися</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBaseEnd</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение выносливости непися.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBasePer</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение привлекательности непися .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetBaseLuc</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение удачи непися.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xIsFemale</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает 1 если непись – женщина , 0 – если нет.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xIsTrader</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает 0 , если непись или кричер не торговец , остальные значения – это сколько типов предметов он будет покупать .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xIsTrainer</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает 1 , если непись тренирует навыки , 0 – если нет .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xIsProvider</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значения выше 0 ,если непись делает заклинания , учит заклинаниям , чинит предметы или зачаровывает. Возвращает 0 , если нет .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xGetService LONG_mask</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Комбинация функций xIsTrader, xIsTrainer, и xIsProvider .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Значение Занятие</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1 Торгует оружием</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">2 Торгует арморами</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">4 Торгует одеждой</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">8 Торгует книжками</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">16 Торгует ингредиентами</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">32 Торгует отмычками</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">64 Торгует щупами</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">128 Торгует светильниками</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">256 Торгует аппаратурой для деланья зелий</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">512 Торгует чинилками</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1024 Торгует misc итемами</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">2048 Учит заклинаниям</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">4096 Торгует зачарованными предметами</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">8192 Торгует зельями</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">16384 Тренирует</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">32768 Делает заклинания.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">65536 Зачаровывает предметы</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">131072 Чинит арморы и оружие</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xSetService LONG_value</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Используется для перемены параметров непися , через значение цифр . Например , Используя значение 8 мы сделаем , чтобы непись торговал книжками .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xModService LONG_value</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Модифицирует уже выбранные значения занятий непися.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xGetBaseGold</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение , сколько золота есть у непися ( или кричера ).</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xGetGold</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение количества золота , которым сейчас обладает непись для проведения</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">торговли.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xSetBaseGold LONG_amount</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Изменяет основное количество золота у непися ( или кричера )</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">REF-&gt;xSetGold LONG_amount</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Аналогично , но количество золота- которое есть сейчас.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xGetValue</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение цены обьекта .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">STRING REF-&gt;xGetOwner</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает 0 если обьект никому не принадлежит , ID владельца , если кому –то принадлежит , или ”unknown” если он принадлежит какой-то фракции .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetWeight</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение веса обьекта.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetEncumb</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает полный вес всех обьектов у непися , кричера или у контейнера .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetQuality</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает значение качества аппаратов для деланья зелий , отмычек и щупов , чинилок.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xGetCondition</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает текущее значение для армора , оружия , отмычек , щупов.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xGetMaxCondition</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает максимальное условие оружию , отмычкам, чинилкам .</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetCharge</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Возвращает текущее использование , типа ”когда заклинание использовано” . Постоянный эффект и незачарованые вещи – возвращает 0.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">FLOAT REF-&gt;xGetMaxCharge</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Показывает максимальный эффект заклинания.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG REF-&gt;xKeyPressed LONG_code</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Показывает статус клавиатуры ( и кнопок мыши ) . Что-то похожее на GetPCSneaking , но вообще-то отслеживает , какая кнопка была нажата .Если входной параметр – цифровое значение клавиши ( между 1 и 254 ) будет остлеживать состояние заданной клавиши , если входной параметр 0 – отслеживать нажатие любой клавиши.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">LONG, STRING REF-&gt;xTextInput STRING_message, LONG_endcode</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Это позволяет сразу считать входной сигнал клавиатуры и результаты будут возвращены как ограничение Функция ждет ключа , который нужно набрать , и после этого предпримет одно из 3 действий. Если ключ подходит , то все возвращается. Если код соответствует стандартам ASCII , то возвращается цифра 0 . Если RETURN или BACKSPACE то ничаинается новая линия , или стирается старая . </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Пример.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> endchar</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> message</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> length</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; ifx </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> endchar </span><span class="de_2653F3EBE3">)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">else</span><span class="de_2E281AB50D"> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">DisablePlayerControls</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> endchar </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">13</span><span class="de_2E281AB50D"> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; setx message </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> xStringBuild </span><span class="de_0D0DEBA2A3">&quot;&quot;</span><span class="de_2E281AB50D"> </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> length </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">return</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endif</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; ifx </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> length </span><span class="de_2653F3EBE3">)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">else</span><span class="de_2E281AB50D"> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; setx length message </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> xTextInput message endchar</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_2653F3EBE3">.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">MessageBox</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;&quot;</span><span class="de_2E281AB50D"> </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; xMessageFix </span><span class="de_0D0DEBA2A3">&quot;%s&#160; &#160; &#160; &#160; &#160; &#160; %&quot;</span><span class="de_2E281AB50D"> message &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">MessageBox</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">MessageBox</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;Enter a message and press ENTER when it is complete.&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">return</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endif</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">EnablePlayerControls</span><span class="de_2E281AB50D">&#160; &#160; &#160; </span><span class="de_537BE7A80F">; The message is complete now</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">LONG, STRING REF-&gt;xTextInputAlt STRING_message, LONG_endcode</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Функция , идентичная функции xTextInput .</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xFileRewind STRING_filename</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Двигает текущее положение чтения к началу скрипта.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xFileSeek STRING_filename, LONG_offset</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Сдвигает позицию считывания в определенное место файла.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">LONG, ... xFileReadText STRING_filename, STRING_pattern</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Считывает текст с файла с определенной позиции считывания. Текущая позиция должна быть потом выбрана .</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xFileWriteText STRING_filename, STRING_format, ...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Вписывает строку в файл в определенную позицию .</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">LONG, SHORT, ... xFileReadShort STRING_filename, LONG_NumToRead</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Считывает значение и число переменных типа SHORT ( 2 байта ) .</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">LONG, LONG, ... xFileReadLong STRING_filename, LONG_NumToRead</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Аналогично с xFileReadShort , но считывает переменные типа LONG .(4 байта)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">LONG, FLOAT, ... xFileReadFloat STRING_filename, LONG_NumToRead</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Аналогично , но считывает переменные типа FLOAT.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xFileWriteShort STRING_filename, SHORT_value</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Вписывает значение типа SHORT (2 байта) в файл в определенное место</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xFileWriteLong STRING_filename, LONG_value</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Аналогично , тип LONG</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xFileWriteFloat STRING_filename, FLOAT_value</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Аналогично , тип float</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">STRING xPCCellID</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Возвращает строку с названием ячейки , в которой игрок.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">STRING REF-&gt;xMyCellID</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Возвращает значение , в котором имя ячейки , в которой определенный обьект .</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">STRING REF-&gt;xGetName</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Возвращает имя обьекта , или 0 , если у обьекта нет имени ( не ID , а имя )</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">STRING REF-&gt;xGetBaseID</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Возвращает значение основного ID обьекта .</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">LONG xStringCompare STRING_str1, STRING_str2</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Сравнивает 2 строки( обьекта ) в алфавитном порядке , и возвращает 0 , если они идентичны.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">LONG xStringLength STRING_string</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Возвращает число character’зов во входной строке.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xLogMessage STRING_format, ...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">вписывает отформатированные строки коды в файл – лог . ((MWScriptExtender.log) )</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xMessageFix STRING_message, ...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Эта функция позволяет вам использовать переменные STRING вместе с функцией MessageBox. Во – первых , команда MessageBox должна сразу следовать после команды</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">xMessageFix. Во – вторых , число строк для этой функции должно соответствовать числу строк в функции MessageBox. В – третьих , MessageBox имеет кнопки , но не может использовать переменные . И , в конце – концов , значения строк используемых на MessageBox будут заменены значениями xMessageFix . </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> thiscell</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; setx thiscell </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> fid</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_2E281AB50D">xPCCellID</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; xMessageFix </span><span class="de_0D0DEBA2A3">&quot;куда телепортнуть Фаргота ?&quot;</span><span class="de_2E281AB50D"> thiscell </span><span class="de_0D0DEBA2A3">&quot;Сейда Нин&quot;</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;Красная Гора&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">MessageBox</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;Отправить Фаргота в локацию&quot;</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;Моя ячейка&quot;</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;Де он был&quot;</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;Вос&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Если вы в Кальдере , Арене Вивека или Альдруне , вам выдаст куда телепортнуть Фаргота</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Кальдера</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Сейда Нин</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Красная Гора</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">куда телепортнуть Фаргота</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Вивек, Округ Арены</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Сейда Нин</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Красная Гора</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>Примеры скриптов</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC">Этот скрипт отслеживает и выводит массу предмета , на который направлен прицел игрока </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_C2B017B551">begin</span><span class="de_2E281AB50D"> getweight_of_pctarget</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> pctarget</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">float</span><span class="de_2E281AB50D"> weight</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; &#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">StopScript</span><span class="de_2E281AB50D"> getweight_of_pctarget</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; setx pctarget </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> xGetPCTarget&#160; </span><span class="de_537BE7A80F">; Возвращает 0 если нету цели</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">if</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> pctarget </span><span class="de_2653F3EBE3">==</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">0</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">)</span><span class="de_2E281AB50D">&#160; </span><span class="de_537BE7A80F">; Нет цели , поэтому массу не показывает</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">MessageBox</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;Вы не нашли предмета для вычисления массы.&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">return</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endif</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; </span><span class="de_537BE7A80F">; гм, теперь если направил</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; setx weight </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> pctarget</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_2E281AB50D">xGetWeight</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">MessageBox</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">&quot;The item had weight %f&quot;</span><span class="de_2E281AB50D"> weight</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">End</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>Скрипт , который заставит всех неписей мужиков , кроме Фаргота , бежать на место , на котором сейчас находится игрок</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_C2B017B551">begin</span><span class="de_2E281AB50D"> siren_call</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">short</span><span class="de_2E281AB50D"> call &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> prospectref &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> prospectid </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">long</span><span class="de_2E281AB50D"> temp &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">float</span><span class="de_2E281AB50D"> px &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">float</span><span class="de_2E281AB50D"> py</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">float</span><span class="de_2E281AB50D"> pz</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> px </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> player</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_993A899DA4">GetPos</span><span class="de_2E281AB50D"> </span><span class="de_C2B017B551">X</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> py </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> player</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_993A899DA4">GetPos</span><span class="de_2E281AB50D"> </span><span class="de_C2B017B551">Y</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> pz </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> player</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_993A899DA4">GetPos</span><span class="de_2E281AB50D"> </span><span class="de_C2B017B551">Z</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; </span><span class="de_537BE7A80F">; проверяем , что за НПС или кричеры в ячейке </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; setx prospectref </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> xFirstNPC</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; whilex </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> prospectref </span><span class="de_2653F3EBE3">)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> call </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">1</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; &#160; &#160; &#160; &#160; </span><span class="de_537BE7A80F">; проверяем тип , так как мы не хотим , чтобы кричеры тоже шли на это место</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; setx temp </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> prospectref</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_2E281AB50D">xRefType</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">if</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> temp </span><span class="de_2653F3EBE3">!=</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">1598246990</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">)</span><span class="de_2E281AB50D">&#160; </span><span class="de_537BE7A80F">; it's not an NPC</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> call </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endif</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; &#160; &#160; &#160; &#160; </span><span class="de_537BE7A80F">; проверяем , мужчина ли это</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; setx temp </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> prospectref</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_2E281AB50D">xIsFemale </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">if</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> temp </span><span class="de_2653F3EBE3">!=</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">0</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">)</span><span class="de_2E281AB50D"> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_537BE7A80F">; it's not a male</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> call </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endif</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; &#160; &#160; &#160; &#160; </span><span class="de_537BE7A80F">; считываем ID этого НПС , Фаргот ли это</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; setx prospectid </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> prospectref</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_2E281AB50D">xGetBaseID </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; setx temp </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> xStringCompare prospectid </span><span class="de_0D0DEBA2A3">&quot;fargoth&quot;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">if</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> temp </span><span class="de_2653F3EBE3">==</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">0</span><span class="de_2E281AB50D"> </span><span class="de_2653F3EBE3">)</span><span class="de_2E281AB50D"> &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_537BE7A80F">; it's Fargoth</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">set</span><span class="de_2E281AB50D"> call </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> </span><span class="de_0D0DEBA2A3">0</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endif</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; &#160; &#160; &#160; &#160; </span><span class="de_537BE7A80F">;</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; ifx </span><span class="de_2653F3EBE3">(</span><span class="de_2E281AB50D"> call </span><span class="de_2653F3EBE3">)</span><span class="de_2E281AB50D">&#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; xSetRef prospectref&#160; &#160; &#160; &#160; &#160; </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">ForceRun</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; prospectref</span><span class="de_2653F3EBE3">-&gt;</span><span class="de_2E281AB50D">xAITravel px py pz</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endif</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; setx prospectref </span><span class="de_C2B017B551">to</span><span class="de_2E281AB50D"> xNextRef prospectref</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">endwhile</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160;&#160; </span><span class="de_537BE7A80F">; только для одного фрейма</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_993A899DA4">stopscript</span><span class="de_2E281AB50D"> siren_call</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_2E281AB50D">&#160; &#160; &#160; &#160; </span><span class="de_C2B017B551">end</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+</div>                                    			
+                			</div>
+</body>
+</html>
