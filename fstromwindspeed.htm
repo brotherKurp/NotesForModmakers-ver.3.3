@@ -330,19 +330,71 @@
                 <div class="description_on_page"><div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;"><div class="ic"><h1><strong>fStromWindSpeed</strong></h1></div></div>
 <div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>fStromWindSpeed</strong> - модификатор скорости ветра.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_8B7D6AF64A">В основном влияет на смещение игрока (и прочих; нпс и существ) в момент касания ими поверхности воды.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_75D1729D2E">Также отвечает за авто смещение в простое.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. игрока (и прочих) начинает сносить в сторону (вектора направление ветра), когда (они) находятся на поверхности воды, но не стоят на дне и не двигаются.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. смещение происходит при определенных условиях положения объекта <a class="local_link" href="fswimheightscale.htm"><span class="de_2B94C39861">относительно поверхности воды</span></a>.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_752695828C"><strong>Влияет ли на что-то еще, не очевидно.</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_75D1729D2E">fStromWindSpeed = 0.0020</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_75D1729D2E">fStromWalkMult = 0.9000</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_75D1729D2E">Wind Speed=1.2</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Дают существенное ускорение по направлению вектора ветра, с равно значительным замедлением при движении против ветра!</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Значение <strong>по умолчанию: 0.7 </strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если установить выше 1.0 то движение (против ветра) станет практические невозможным.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Зато если идти по ветру, это придаст былинное ускорение.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Работает в &quot;ветреную&quot; погоду, которая настраивается в ИНИ файле.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Влияет на всех. И на существа и на нпс, и на ГГ.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 4px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Взаимодействует, точнее берет, базовые параметры из </strong><a class="local_link" href="mw_ini_at_whole.htm"><span class="de_2B94C39861"><strong>Мв.ини</strong></span></a><strong> файла.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Wind Speed = </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Для каждого типа погоды задается своя отдельная скорость ветра.<br />Если скорость =0, эффекта (смещения) не наблюдается.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Ветер (похоже) дует всегда с низа карты, т.е. с юга на север.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">На анимации баннеров и прочего - не влияет.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Позволяет изменять вектор оного направления!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. минус, плюс.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Принимает отрицательные значения, да.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">По видимости, вектор работает только в двух направлениях.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Управлять оными, через этот параметр, не предусмотрено.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Дефолтное значение, практически никак не ощутимо, если не обращать внимания специально используя микроскоп и минзурку.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Но даже незначительное поднятие, начнет создавать серьезное препятствие, блокирующие движение (на юг) и смещающие (только при движении!!) на север.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Вектором можно управлять!<br /></strong>fStromWindSpeed<span class="de_CF136AA7C2"><strong> </strong></span><span class="de_51752156DC"><strong>=</strong></span><span class="de_CF136AA7C2"><strong> -</strong></span>1.000 изменит направление с северна на юг.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. начнет сносить вниз карты.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Ветер ВСЕГДА работает с низа карты, т.е. с юга на север.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Положение игрока относительно центра карты, не имеет значения.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><br /><span class="de_CF136AA7C2"><strong>Кроме!</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_CF136AA7C2"><strong>Кроме случая моровой и пепельной бури.</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_CF136AA7C2"><strong>В этом случае, вектор влияния ветра идет ОТ Красной Горы!</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">С чем это связано - не определено, для всех других типов погоды, работает строго ЮГ-Север, либо север-юг.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Выглядит так, что,</strong><span class="de_75D1729D2E"><strong> чем ниже </strong></span><strong>значение ГМСТ, </strong><span class="de_75D1729D2E"><strong>тем сильнее</strong></span><strong> влияет параметр из Мв.ини файла.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Иначе, чем выше значение wind speed и меньше fStromWindSpeed, тем сильнее и заметнее будет эффект, смещения на поверхности воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Протестированные случаи:</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если wind speed = 2000 и fStromWindSpeed 0.1000 - игрока уносит за край карты при касании поверхности воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если wind speed = 2000 и fStromWindSpeed 120.0000 - игрока довольно бодро смещает по поверхности воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если wind speed = 1.0&#160; и fStromWindSpeed 120.0000 - игрока смещает почти незаметно.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если wind speed = 1.0 и fStromWindSpeed 0.0050 - игрока очень бодро смещает по поверхности воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">При этом, на поверхности земли, ничего такого не отмечается, т.е. не происходит автоматического смещения!</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Хотя можно было бы полагать, что параметр влияет на общее ускорение игрока по вектору ветра.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Впрочем, скорее, за это отвечает </span><a class="local_link" href="fstromwalkmult.htm"><span class="de_0F609BFBFC">fStromWalkMult</span></a><span class="de_823826CA2C">.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_51752156DC"><strong>Для каждого типа погоды, настраивается своя скорость ветра (в Ини файле!)</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Если скорость ветра (в ини файле) =0.0, то эффект не наблюдается.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>На анимации баннеров и прочего - не влияет. </strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Если объекты (нпс существа) стоят на месте (на земле) - не влияет.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. авто смещения на поверхности земли не происходит, но только на поверхности воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Примечание.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Направление движения модели бури (ниф файла, пепельной или моровой) идет всегда ОТ центра карты, ака Красной Горы.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">И параметр ветра, тот что в мв.ини файле, так и эти гмст - НЕ влияют на эту модель!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. скорость движения облаков пыли, не изменяется.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также, в пепельную бурю, четко можно видеть, что клубы пыли идут со стороны КГ (компас и курсор под меню, челом бьют!)</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">А если оказаться в воде, то да, смещение пойдет по вектору от Красной Горы, откуда и видно движение облаков пыли.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><br />В остальных случаях, смещение, север юг.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также см.<a class="local_link" href="mw_ini_weather_wind_speed.htm"><span class="de_2B94C39861"> здесь.</span></a></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 4px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 </div>                                    			
                 			</div>

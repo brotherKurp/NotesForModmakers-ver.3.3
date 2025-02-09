@@ -360,14 +360,37 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_68B99ACC5C"><strong>Теперь, добавить базовые элементы частиц. </strong></span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_68B99ACC5C"><strong>Insert-&gt;</strong></span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">1. <a class="local_link" href="niparticles.htm"><span class="de_2B94C39861">NiParticles</span></a></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">2. <a class="local_link" href="niparticlesdata.htm"><span class="de_2B94C39861">NiParticlesData</span></a></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">2. <a class="local_link" href="niparticlesdata.htm"><span class="de_2B94C39861">NiParticlesData</span></a><span class="de_51752156DC"> </span><span class="de_DBF328B893">(возможно лучше добавлять </span><a class="local_link" href="niautonormalparticlesdata.htm"><span class="de_AE3423201B">NiAutoNormalParticlesData</span></a><span class="de_1142CCE897">)</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">3. <a class="local_link" href="niparticlesystemcontroller.htm"><span class="de_2B94C39861">NiParticleSystemController</span></a></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">4.<a class="local_link" href="ninode.htm"><span class="de_2B94C39861"> NiNode</span></a> <span class="de_823826CA2C">(это будет </span><a class="local_link" href="emitter.htm"><span class="de_0F609BFBFC">эмиттер</span></a><span class="de_823826CA2C">)(сразу задать имя &quot;emitter&quot;)</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">5. <a class="local_link" href="niparticlegrowfade.htm"><span class="de_2B94C39861">NiParticleGrowFade</span></a><span class="de_823826CA2C"> (опционально).</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Можно было бы добавить </span><span class="de_1142CCE897">NiAutoNormalParticles, или NiRotatingParticles, но практической пользы в этом нет.</span></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_1142CCE897">Т.к. дополнительные поля не работают, а основные настройки совпадают с NiParticles.</span></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_1142CCE897">Поэтому, сразу используем NiParticles.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_CF136AA7C2"><strong>Поправочка от </strong></span><span class="de_6315D75228"><strong>Svergy</strong></span><span class="de_CF136AA7C2"><strong> за 2025ый!</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BAB7D5A7">&quot;Внезапно&quot; выяснилось, что </span><span class="de_B8BE983395">NiParticlesData палка о двух концах.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Т.е. может работать не совсем стабильно вызывая интересные глюки.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">По крайней мере, в файлах существ, такое было отмечено.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">- может нарушаться размер частиц (это не очень интересно)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">- все существа в сцене, будут проигрывать анимации частиц синхронно, даже если они &quot;мертвы&quot;. (а это уже интересно, да).</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Например существо должно испустить частицы только в момент кончины, что срабатывает исправно...</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Только для всех существ в сцене, в т.ч. (еще) живых! Они синхронно с &quot;убиенным&quot; испустят положенные на анимацию частицы.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Также, испустят из себя частицы, уже &quot;не живые&quot; существа.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Таким образом получается возможность создавать затейливые анимации.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">При этом, виновником &quot;торжества&quot; являются ТОЛЬКО NiParticlesData!<br />Ни NiParticles, ни BsparticleNode с хитрыми флагами, ни еще какие-то замороченные пляски с бубнами, а один этот объект!</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Таким образом, (теперь) стоит рекомендовать использовать не NiParticlesData, а NiAutoNormalParticlesData.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Которая не имеет подобного странного поведения.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BAB7D5A7">Можно было бы добавить </span><span class="de_B8BE983395">NiRotatingParticles, но практической пользы в этом нет. Этот объект не работоспособен полностью.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Поэтому, сразу используем NiParticles с NiParticlesData, либо (что оказывается надежнее!) с NiAutoNormalParticlesData!</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><br /><span class="de_B8BE983395">Еще!<br />Если начали сумневаться в NiParticles, то используйте NiAutoNormalParticles.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Хотя тесты показали, что &quot;хомяк&quot; схоронился именно в дате частиц и название их контейнера не оказывает эффекта.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Также, описанный выше момент, имел место быть в файлах существ.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Т.е. влияние на частицы светильников, касторов, активаторов и пр. объектов будет не столь &quot;радикально&quot;.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_B8BE983395">Конечно, если не начать использовать затейливые скрипты и МВСЕ.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_E6061C3639">И да, дальше по заметке везде продолжат упоминаться </span><a class="local_link" href="niparticlesdata.htm"><span class="de_0F609BFBFC">NiParticlesData</span></a><span class="de_DBF328B893">. </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_DBF328B893">Просто держите в уме, ЕСЛИ появились странности в работе частиц, то смените тип их даты на </span><span class="de_E6061C3639">NiAutoNormalParticlesData. </span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_68B99ACC5C"><strong>Едем дальше!</strong></span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Через Attach Properties выделив NiParticles:</strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">6. </span><a class="local_link" href="nimaterialproperty.htm"><span class="de_0F609BFBFC">NiMaterialProperty</span></a></div>
@@ -392,6 +415,8 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Теперь переходим в NiParticlesData. </strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Где прописываем базовые параметры частиц от которых будет стартовать NiParticleSystemController.</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Также, это нужно для отображения частиц в нифскопе и в окне редактора, сразу после размещения в сцену частиц.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">NiParticlesData</span><span class="de_3E948785CF"> во всем идентичны NiAutoNormalParticlesData!</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><img  alt="" style="border: solid 0px;  " width="535" height="366" class=" de_780D01ADE8" src="Pics/drex_particles_from_scratch_via_nifskope_only_custom_3.png"/></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><table class="de_tbl_1031 detbl" style="width: 1031px; height: 96; margin-left: 0; margin-right: auto;">
@@ -483,7 +508,7 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Это уже полностью настроенный контроллер.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Можно установить настройки аналогичные этим.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><table class="de_tbl_1204 detbl" style="width: 1204px; height: 100; margin-left: 0; margin-right: auto;">
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><table class="de_tbl_1204 detbl" style="width: 1204px; height: 148; margin-left: 0; margin-right: auto;">
 <col style="width: 126px;" class="de_col_1_126" />
 <col style="width: 72px;" class="de_col_2_72" />
 <col style="width: 1006px;" class="de_col_3_1006" />
@@ -603,7 +628,7 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">0.0</div>
 </td><td class="de_td_1006" style = "padding: 2px; padding-bottom: 1px; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;  width: 1006px; vertical-align: top;" colspan = "1" rowspan = "1" >
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Здесь создается ровный поток, где все его частицы имеют равное время существования.</div>
-</td></tr><tr style="height: 0px;">
+</td></tr><tr style="height: 48px;">
 <td class="de_td_126" style = "padding: 2px; padding-bottom: 1px; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;  width: 126px; vertical-align: top; background-color: #bfbfbf;" colspan = "1" rowspan = "1" >
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Emitter</strong></div>
 </td><td class="de_td_72" style = "padding: 2px; padding-bottom: 1px; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;  width: 72px; vertical-align: top; background-color: #ffffca;" colspan = "1" rowspan = "1" >
@@ -652,7 +677,8 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Далее, настраиваем модификатор частиц!<br />Здесь это </strong><a class="local_link" href="niparticlegrowfade.htm"><span class="de_2B94C39861"><strong>NiParticleGrowFade</strong></span></a><strong>:<br /></strong>Grow 0.0000 - частицы имеют 100% размер в начале рождения.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Fade 1.0000 - и сокращаются до 1% к концу жизни.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Это создаст систему частиц с широким основанием и острым верхом. Что подходит для создания пламени свечи, или костра.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Это создаст систему частиц с широким основанием и острым верхом. </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Что подходит для создания пламени свечи, или костра.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><img  alt="" style="border: solid 0px;  " width="569" height="105" class=" de_780D01ADE8" src="Pics/drex_particles_from_scratch_via_nifskope_only_custom_6.png"/></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">В слоте Controller (niParticleGrowFade) <span class="de_476D3D315E">обязательно </span>следует указать номер NiParticleSystemController!</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Иначе модель приведет к вылету игры.</div>
@@ -678,7 +704,8 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Финальная конструкция, будет выглядеть примерно так:</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><img  alt="" style="border: solid 0px;  " width="462" height="74" class=" de_780D01ADE8" src="Pics/drex_particles_from_scratch_via_nifskope_only_custom_9.png"/></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>В принципе все, полученная конструкция уже будет работать в игре!<br /></strong>Но для удобства, следует добавить хотя бы один шейп, иначе частицы будет невозможно выделять и перемещать в редакторе.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>В принципе все, полученная конструкция уже будет работать в игре!<br /></strong>Но для возможности выделения и перемещения модели в редакторе, следует добавить хотя бы один шейп!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Иначе частицы будет невозможно выделять и перемещать.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Самый простой вариант, <a class="local_link" href="kopipasta_obektov.htm"><span class="de_2B94C39861">скопировать шейп</span></a> из любого другого ниф файла.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Модели открытого огня в каминах будут оптимальны.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также, будет полезно превратить это в <a class="local_link" href="dobavlenie_editormarker.htm"><span class="de_2B94C39861">маркер</span></a>.</div>
@@ -727,9 +754,10 @@
 </li></ul></td></tr></table></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">А после добавления вспомогательных элементов в виде <a class="local_link" href="tri_editormarker.htm"><span class="de_2B94C39861">Маркера</span></a> и <a class="local_link" href="bounding_box.htm"><span class="de_2B94C39861">Боундинг Бокса</span></a>:<br /><img  alt="" style="border: solid 0px;  " width="538" height="217" class=" de_780D01ADE8" src="Pics/drex_particles_from_scratch_via_nifskope_only_custom_11.png"/></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Маркер - служит для возможности выделения модели в редакторе.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">БоундБокс - для управления размером выделения, т.е. просто для удобства.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">А после добавления вспомогательных элементов в виде <a class="local_link" href="tri_editormarker.htm"><span class="de_2B94C39861">Маркера</span></a> и <a class="local_link" href="bounding_box.htm"><span class="de_2B94C39861">Боундинг Бокса</span></a>, это будет выглядеть вот так:<br /><img  alt="" style="border: solid 0px;  " width="538" height="217" class=" de_780D01ADE8" src="Pics/drex_particles_from_scratch_via_nifskope_only_custom_11.png"/></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Маркер</strong> - служит для возможности выделения модели в редакторе.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>БоундБокс</strong> - для управления размером выделения, т.е. просто для удобства.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><a class="local_link" href="nistringextradata_spisok_komand.htm"><span class="de_2B94C39861"><strong>СтрингЭкстраДата</strong></span></a> - служит триггером для включения использования маркера, т.е. это также, необходимая запись.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Если нужно получить шлейф за частицами, что актуально в основном для факелов, или иных подвижных объектов, то:</strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Выбрать частицы:</div>
@@ -738,12 +766,16 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также, см. <a class="local_link" href="nibsparticlenode_primechaniya.htm"><span class="de_2B94C39861">примечания</span></a>, о том какие флаги, какой эффект дают.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Финальная конструкция будет примерно такой:</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><img  alt="" style="border: solid 0px;  " width="556" height="103" class=" de_780D01ADE8" src="Pics/drex_particles_from_scratch_via_nifskope_only_custom_12.png"/></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">При этом, корень файла, можно превратить в обычную ноду.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Т.к. все анимации частиц, теперь будет включаться через бспартиклеНоду.</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Таким образом, если в файле есть еще какая-то анимация, то;</strong></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">- корень файла это NiBsAnimationNode, а сами частицы упакованы в NiBSParticleNode (если нужен шлейф) если не нужен, то используем NiNode.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Но если никакой иной анимации нет, то;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">- корень файла это NiBsAnimationNode!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">А сами частицы упакованы в NiBSParticleNode (если нужен шлейф) если не нужен, то используем NiNode.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Но если никакой иной анимации в файле нет, то;</strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">- корень файла может быть обычной <a class="local_link" href="ninode.htm"><span class="de_2B94C39861">NiNode</span></a>, и только частицы упаковать в NiBSParticleNode, либо в NiBsAnimationNode (если не нужен шлейф).</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Делать корень файла из NiBSParticleNode - не лучшая идея.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Делать корневую ноду файла NiBSParticleNode - не лучшая идея. Точнее, вот прям совсем проблемная!</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Для статичных светильников (костры, даэдрические жаровни и пр.) достаточно вложенных NiBSParticleNode.</strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Корень файла может сохраняться как NiNode.</div>
@@ -763,7 +795,18 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">- частицы упаковать в обычную NiNode (10).<br />т.е. отказаться от NiBSParticleNode.</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">В 99% случаев после этого частицы начинают работать исправно.</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">Если не помогло и это, проверить флаги контроллера частиц и!</span></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">Возможно в редакторе подключена не та модель которую сейчас редактировали (С)</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5"><strong>А еще, вот если ничего совсем не помогает!</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_FA021CA4E5">Возможно в редакторе подключена не та модель которую сейчас редактировали (С) ^-^</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8"><strong>Еще вариант, модель не обновилась по причине ее кешированности!</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">Либо в текущей сцене уже есть несколько объектов с этой моделью.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">Либо, было открыто несколько ячеек редактора, где, эта модель уже находилась.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">Отчего при попытке ее обновить оную (в другой ячейки) никаких изменений не будет видно.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">В этом случае, подключите совсем другую модель, а затем верните обратно текущую.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">Либо перезапустите редактор.<br />Такой &quot;глюк&quot; можно поймать на поздних этапах работы с плагином.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">Если же модель находится в текущей ячейке, но в нескольких копиях, то удалите их все и нажмите отмену.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_A357E5F0F8">Это также обновит данные модели.</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>И, теперь собственно все(С)</strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Проверить частицы в игре!</div>
@@ -790,12 +833,12 @@
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><img  alt="" style="border: solid 0px;  " width="391" height="384" class=" de_780D01ADE8" src="Pics/drex_particles_from_scratch_via_nifskope_only_custom_15.png"/></div>
 </td></tr><tr style="height: 0px;">
 <td class="de_td_518" style = "padding: 2px; padding-bottom: 1px; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;  width: 100px; vertical-align: top;" colspan = "1" rowspan = "1" >
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Модель в игре.</span></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Видно только пламя и никаких багов с мерцанием, чем &quot;грешат&quot; ванильные модели огня.</span></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">За исправления этой оказии и отвечает Editor marker.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Модель в игре.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Видно только пламя и никаких багов с мерцанием, чем &quot;грешат&quot; ванильные модели огня.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">За исправления этой оказии и отвечает Editor marker.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 </td><td class="de_td_397" style = "padding: 2px; padding-bottom: 1px; border-left-style: solid; border-left-width: 1px; border-left-color: #000000; border-right-style: solid; border-right-width: 1px; border-right-color: #000000; border-top-style: solid; border-top-width: 1px; border-top-color: #000000; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;  width: 100px; vertical-align: top;" colspan = "1" rowspan = "1" >
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Модель в редакторе с отображением Маркера.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Модель в редакторе с отображением Маркера.</div>
 </td></tr></table></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 5px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_56F4564E24"><strong>За доп. подробностями см. ролики:<br /></strong>@_Notes_for_Modmaking\Additional_Files\Tours\</span>NiParticle<span class="de_56F4564E24">\NF_particle_from_scratch.flv</span></div>
