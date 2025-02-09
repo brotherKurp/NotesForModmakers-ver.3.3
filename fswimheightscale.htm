@@ -329,21 +329,42 @@
     </noscript>
                 <div class="description_on_page"><div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;"><div class="ic"><h1><strong>fSwimHeightScale</strong></h1></div></div>
 <div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>fSwimHeightScale</strong> - множитель скорости определяющий насколько быстро персонаж всплывает и опускается находясь в воде.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>fSwimHeightScale</strong> - <span class="de_34F0647984">множитель скорости определяющий насколько быстро персонаж всплывает и опускается находясь в воде.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_CF136AA7C2"><strong>Неверно.</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Это триггер дистанции поверхности воды, по отношению к которой сменяются анимации обычного движения, на плавание.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">А равно отключается просчет гравитации и игрок, теряет возможность прыгать.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также, косвенно, влияет, на возможность всплыть выше уровня воды и способность выходить на сушу.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Значение <strong>по умолчанию: 0.9</strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_CF136AA7C2"><strong>Дополнение!<br /></strong></span><strong>Отвечает за фактическую дистанцию реакции на переключение анимаций, между ходьбой и плаванием относительно поверхности воды.</strong></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Наблюдения:</strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">0.0001 - игрок и нпс начнут проигрывать анимацию плавание на некотором расстоянии выше поверхности воды!</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. еще не коснувшись поверхности воды, игрок, перейдет на анимацию плавания, которую и будет сохранять далее находясь выше воды.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Фактически могут летать над водой проигрывая анимации плавания, возможность погрузиться и плыть - сохраняется.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Фактически могут летать над водой проигрывая анимации плавания.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Возможность погрузиться и плыть - сохраняется.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">2.0 игрок включает анимации плавания с заметной задержкой.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">При этом, становится невозможным нормальное всплытие. </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Голова игрока, будет находится ниже уровня воды, как бы не он не старался всплыть выше.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также, появляется спотыкание о прибрежные камни и мелководье.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Фактически, становится сложнее выходить из воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">-120.000, игрок проваливается в анимации прыжка находясь выше воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. да, фактически, летает над водой, на фиксированном расстоянии, периодически пытаясь &quot;упасть&quot; на воду.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. анимация плавания может пропадать.</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">120.0000 - игрок и нпс перестают проигрывать анимации плавания продолжая двигаться под водой с обычными анимациями.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. начинают ходить по дну! При этом появляется возможность прыгать!<br />Т.е. игрок может выпрыгнуть из воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. да, все начинают ходить по дну! </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">При этом появляется возможность прыгать!<br />Игрок может выпрыгнуть из воды!</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также это влияет на скорость погружения, да. </div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Но скорее это косвенное влияние вызванное отключением реакции на поведение в воде.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">120 это дистанция от поверхности воды!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.к. если зайти на бОльшую глубину, включится анимация плавания.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Значение дистанции не определено, т.е. это не выглядит как обычные юниты.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Игрок заходит много глубже своего роста (рост НПС это 128 единиц).</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Если установить значение более 512, вероятно, игрок вовсе перестанет плавать даже на большой глубине.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">В теории, это позволят создавать правильные тяжелые доспехи, плавание в которых, явно затруднительно...</span></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><table class="de_tbl_812 detbl" style="width: 462px; height: 0; margin-left: 0; margin-right: auto;">
 <col style="width: 100px;" class="de_col_1_406" />

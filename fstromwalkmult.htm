@@ -331,15 +331,43 @@
 <div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: center; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>fStromWalkMult</strong> - множитель для определения скорости перемещения персонажа во время бури.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Ускоряет при движении по вектору направления ветра, замедляет при движении против ветра.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Вектором можно управлять!<br /></strong>fStromWalkMult<span class="de_51752156DC"><strong>=</strong></span><span class="de_CF136AA7C2"><strong> -</strong></span>0.0Х00 изменит направление смещения.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. инвертирует вектор ускорения по направлению ветра.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_CF136AA7C2">Сила самого ветра,</span><a class="local_link" href="fstromwindspeed.htm"><span class="de_2B94C39861"> fStromWindSpeed</span></a><span class="de_CF136AA7C2"> влияет!</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_CF136AA7C2">Т.е. работает только вместе с этим параметром, который в свою очередь, смотрит значение силы ветра в </span><a class="local_link" href="mw_ini_weather.htm"><span class="de_2B94C39861">мв.ини </span></a><span class="de_CF136AA7C2">файле.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_75D1729D2E">fStromWindSpeed = 0.0020</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_75D1729D2E">fStromWalkMult = 0.9000</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_75D1729D2E">Wind Speed=1.2</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Дают существенное ускорение по направлению вектора ветра, с равно значительным замедлением при движении против ветра!</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Значение <strong>по умолчанию: 0.25 </strong></div>
 <div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Значение выше 1.0 приводит к резкому смещению игрока (нпс и пр) при движении!</strong></div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Смещает с юга на север (т.е. всегда с низа карты на верх).</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Т.е. любое движение (вправо влево вперед назад) будет отбрасывать игрока (и пр) в направлении обратном &quot;дуновению&quot; ветра.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Но если изменение одной силы ветра создает лишь &quot;барьер&quot;, мешающие передвижению против ветра, то изменение этого параметра,</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">приводит к невозможности нормально перемещать от слова совсем.</div>
-<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Существа и неписи будут улетать за край карты пробивая стены своими ББ и погружаясь в бездну мировых вод (в теории в последствии).</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 4px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_752695828C"><strong>Значение выше 1.0 может приводить к резкому смещению игрока (нпс и пр) при движении!</strong></span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Т.е. при высоких значения силы ветра, приведет к обратному смещению при движении!</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Т.е. ЛЮБОЕ движение, как по вектору, так и против - приведет к смещение (отбрасыванию) ПО направлению ветра.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Т.е. любое движение (вправо влево вперед назад) будет отбрасывать игрока (и пр) в направлении обратном &quot;дуновению&quot; ветра.</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также, существа и неписи будут улетать за край карты пробивая стены своими <a class="local_link" href="bounding_box.htm"><span class="de_2B94C39861">ББ </span></a>и погружаясь в бездну мировых вод (в теории в последствии).</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><br />Если скорость ветра (в .ини файле) = 0, эффекта не оказывает!</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также влияет на движение на поверхности воды.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Но не работает при полном погружении (игрока и прочих) под воду.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>В любом случае:</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">- влияет на всех. И на существа и на нпс, и на ГГ.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">- и только на поверхности (земли, воды).</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">- если идти по ветру, то дает известный буст к скорости.</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">- если идти против ветра, замедляет, до состояния &quot;невидимой стены&quot;. </div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><span class="de_823826CA2C">Для такого нужны значения 1.0, или выше.</span></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><strong>Больше чем 0.7 начинает создавать явно заметные замедления при движении против ветра!</strong></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">&#160;</div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;">Также см.<a class="local_link" href="mw_ini_weather_wind_speed.htm"><span class="de_2B94C39861"> здесь.</span></a></div>
+<div class="p" style="text-align: left; direction: ltr; margin-left: 0px; text-indent: 0px;"><hr style="width: 100%; height: 4px; text-align: center; margin-left: auto; margin-right: auto; border:none; background-color:#0012ff; color: #0012ff; clear:none;" /></div>
 </div>                                    			
                 			</div>
 </body>
